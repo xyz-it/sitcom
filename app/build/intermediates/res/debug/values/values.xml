@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/kimveasna/Documents/sitcom/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">SalesOrder</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- From: file:/Users/kimveasna/Documents/sitcom/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+	</style>
+</resources>
