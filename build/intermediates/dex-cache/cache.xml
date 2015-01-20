@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/kimveasna/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jar="/Users/kimveasna/AndroidStudioProjects/sitcom/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/kimveasna/AndroidStudioProjects/sitcom/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-4dd702ac3508bd78de1473ca478bc4800db49501.jar" />
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/kimveasna/AndroidStudioProjects/sitcom/app/build/intermediates/pre-dexed/debug/classes-0a6dbddd7c38f1bdae5b3cba940eae879e0ff254.jar" />
     </item>
     <item
         jar="/Users/kimveasna/AndroidStudioProjects/sitcom/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
@@ -14,6 +14,13 @@
         revision="19.1.0"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="/Users/kimveasna/AndroidStudioProjects/sitcom/app/build/intermediates/pre-dexed/debug/classes-3c4a40fcf5a31239f4e5c5e68e3c0796dfaa79eb.jar" />
+    </item>
+    <item
+        jar="/Users/kimveasna/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/kimveasna/AndroidStudioProjects/sitcom/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-4dd702ac3508bd78de1473ca478bc4800db49501.jar" />
     </item>
     <item
         jar="/Users/kimveasna/AndroidStudioProjects/sitcom/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
