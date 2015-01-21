@@ -28,6 +28,7 @@ import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
 import	android.support.v7.app.ActionBarActivity;
+import android.widget.RelativeLayout;
 
 /**
  * This example illustrates a common usage of the DrawerLayout widget
@@ -92,8 +93,10 @@ public class MainActivity extends ActionBarActivity {
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         // enable ActionBar app icon to behave as action to toggle nav drawer
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the sliding drawer and the action bar app icon
@@ -106,12 +109,12 @@ public class MainActivity extends ActionBarActivity {
                 R.string.drawer_close  /* "close drawer" description for accessibility */
         ) {
             public void onDrawerClosed(View view) {
-                getActionBar().setTitle(mTitle);
+                getSupportActionBar().setTitle(mTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 
             public void onDrawerOpened(View drawerView) {
-                getActionBar().setTitle(mDrawerTitle);
+                getSupportActionBar().setTitle(mDrawerTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
@@ -134,8 +137,9 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
-        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
+        //boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
+        boolean drawerOpen = false;
+                menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -177,21 +181,21 @@ public class MainActivity extends ActionBarActivity {
         Fragment fragment = new PlanetFragment();
         Bundle args = new Bundle();
         args.putInt(PlanetFragment.ARG_PLANET_NUMBER, position);
-        fragment.setArguments(args);
+        //fragment.setArguments(args);
 
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        //FragmentManager fragmentManager = getFragmentManager();
+        //fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
         // update selected item and title, then close the drawer
         mDrawerList.setItemChecked(position, true);
         setTitle(mPlanetTitles[position]);
-        mDrawerLayout.closeDrawer(mDrawerList);
+        //mDrawerLayout.closeDrawer(mDrawerList);
     }
 
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;
-        getActionBar().setTitle(mTitle);
+        getSupportActionBar().setTitle(mTitle);
     }
 
     /**
