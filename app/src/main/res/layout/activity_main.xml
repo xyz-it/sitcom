@@ -48,7 +48,6 @@ The drawer is given a fixed width in dp and extends the full height of
 the container. A solid background is used for contrast
 with the content view. -->
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_gravity="start"
