@@ -7,4 +7,11 @@
 
     <color name="windowBackgroundColor">#333333</color>
     <color name="black_translucent">#80000000</color>
+
+    <color name="testcolor1">#000</color>
+    <color name="testcolor2">#ffff0000</color>
+    <color name="testcolor3">#ff0eff2e</color>
+    <color name="testcolor4">#ff0720ff</color>
+    <color name="testcolor5">#ffff7687</color>
+
 </resources>

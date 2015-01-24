@@ -90,11 +90,12 @@ with the content view. -->
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:textColor="#222"
-            android:background="#EEE"
+            android:background="@color/menu_item_color"
             android:minHeight="?android:attr/listPreferredItemHeightSmall"
             android:drawableLeft="@drawable/ic_customer"
             android:drawablePadding="5dp"
             android:text="@string/menu_header"
+            android:clickable="true"
             />
 
     </LinearLayout>
