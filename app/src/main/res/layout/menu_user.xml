@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
+    android:orientation="vertical" 
+	android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/ic_lapeyre_background"
+    android:background="@drawable/menu_user_background"
     android:baselineAligned="false"
-    android:backgroundTint="@color/sitcomHeader"
-    android:backgroundTintMode="multiply">
+    android:backgroundTint="#000"
+    android:backgroundTintMode="add">
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:id="@+id/imageView"
         android:src="@drawable/ic_user"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY" /> -->
+	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Kimveasna PEN"
+        android:id="@+id/username"
+		android:drawableLeft="@drawable/ic_user"
+		android:gravity="center"
+         />
 </LinearLayout>
