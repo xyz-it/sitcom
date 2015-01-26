@@ -9,10 +9,12 @@ import android.app.FragmentManager;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -60,6 +62,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends ActionBarActivity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
+    private ListView mDrawerList2;
 	private FrameLayout mFrameLayout;
 	private Toolbar mToolbar;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -67,6 +70,7 @@ public class MainActivity extends ActionBarActivity {
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
     private String[] mPlanetTitles;
+    private TypedArray mLeftMenuItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,9 +79,11 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         mTitle = mDrawerTitle = getTitle();
+        mLeftMenuItems = getResources().obtainTypedArray(R.array.menu_items);
         mPlanetTitles = getResources().getStringArray(R.array.planets_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        mDrawerList2 = (ListView) findViewById(R.id.left_drawer2);
 		mFrameLayout = (FrameLayout) findViewById(R.id.content_frame);
 		mToolbar = (Toolbar) findViewById(R.id.toolbar);
 		//findViewById(R.id.toolbar);
@@ -86,11 +92,20 @@ public class MainActivity extends ActionBarActivity {
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
-        //mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-        //        R.layout.drawer_list_item, mPlanetTitles));
-		mDrawerList.setAdapter(new LeftMenuAdapter(this,
-				R.layout.drawer_list_item, mPlanetTitles));
+        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+                R.layout.drawer_list_item, mPlanetTitles));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+
+
+        String[] menuViewId = new String[7];
+        for(int i=0;i<mLeftMenuItems.length();i++){
+            menuViewId[i] = mLeftMenuItems.getString(i);
+        }
+
+
+        mDrawerList2.setAdapter(new LeftMenuAdapter(this,
+                R.layout.drawer_list_item, menuViewId));
+
 
         // enable ActionBar app icon to behave as action to toggle nav drawer
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

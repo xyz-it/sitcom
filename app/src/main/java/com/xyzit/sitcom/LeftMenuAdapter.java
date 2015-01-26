@@ -1,6 +1,8 @@
 package com.xyzit.sitcom;
 
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,37 +11,38 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.app.*;
 
+import java.util.Locale;
+
 public class LeftMenuAdapter extends ArrayAdapter<String> {
 	private final Context context;
-	private final String[] values;
+	private int[] itemView = new int[7];
 
-	public LeftMenuAdapter(Context context, String[] values) {
-		super(context, R.layout.drawer_list_item, values);
-		this.context = context;
-		this.values = values;
-	}
 	
 	public LeftMenuAdapter(Context context, int layout, String[] values) {
-		super(context, layout, values);
+		//super(context, layout, values);
+        super(context, layout, values);
+
+        for(int i=0;i<values.length;i++){
+            itemView[i] = context.getResources().getIdentifier(values[i],
+                    "layout", context.getPackageName());
+        }
+
 		this.context = context;
-		this.values = values;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+
+/*
 		LayoutInflater inflater = (LayoutInflater) context
 			.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View rowView = inflater.inflate(R.layout.drawer_list_item, parent, false);
+
 		TextView textView = (TextView) rowView.findViewById(R.id.label);
 		//ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
 		textView.setText(values[position]);
 		// change the icon for Windows and iPhone
 		String s = values[position];
-		/*if (s.startsWith("iPhone")) {
-			imageView.setImageResource(R.drawable.no);
-		} else {
-			imageView.setImageResource(R.drawable.ok);
-		}*/
 
 		int imageId = 0;
 		if (s.startsWith("Client")) {
@@ -51,6 +54,12 @@ public class LeftMenuAdapter extends ArrayAdapter<String> {
 		}
 		textView.setCompoundDrawablesWithIntrinsicBounds(imageId, 0, 0, 0);
 		
-		return rowView;
+		return rowView;*/
+
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View rowView = inflater.inflate(itemView[position], parent, false);
+
+        return rowView;
 	}
 	}

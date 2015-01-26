@@ -1,6 +1,6 @@
 <resources>
-    <color name="colorPrimary">@color/material_blue_grey_800</color>
-    <color name="colorPrimaryDark">@color/material_blue_grey_900</color>
+    <color name="colorPrimary">@color/colorPrimaryDark</color>
+    <color name="colorPrimaryDark">#424343</color>
 
     <color name="colorSecondary">@color/material_deep_teal_200</color>
     <color name="colorSecondaryDark">@color/material_deep_teal_500</color>
@@ -13,5 +13,8 @@
     <color name="testcolor3">#ff0eff2e</color>
     <color name="testcolor4">#ff0720ff</color>
     <color name="testcolor5">#ffff7687</color>
+    <color name="sitcomHeader">#424343</color>
+    <color name="sitcomTableHeader">#58585B</color>
+
 
 </resources>

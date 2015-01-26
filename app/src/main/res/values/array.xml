@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="menu_items">
+        <item>menu_user</item>
+        <item>menu_customer</item>
+        <item>menu_header</item>
+        <item>menu_articles</item>
+        <item>menu_financing</item>
+        <item>menu_delivery</item>
+        <item>menu_installation</item>
+
+
+    </string-array>
+</resources>

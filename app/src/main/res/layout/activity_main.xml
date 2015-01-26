@@ -61,41 +61,17 @@ with the content view. -->
             android:choiceMode="singleChoice"
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
-            android:background="#eee"/>
+            android:background="#eee"
+            android:visibility="gone" />
 
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/label_customer"
-            android:layout_width="match_parent"
+        <ListView
+            android:id="@+id/left_drawer2"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceListItemSmall"
-            android:gravity="center_vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:textColor="#222"
-            android:background="?android:attr/activatedBackgroundIndicator"
-            android:minHeight="?android:attr/listPreferredItemHeightSmall"
-            android:drawableLeft="@drawable/ic_customer"
-            android:drawablePadding="5dp"
-            android:text="@string/menu_customer"
-            />
-
-
-        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/label_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceListItemSmall"
-            android:gravity="center_vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:textColor="#222"
-            android:background="@color/menu_item_color"
-            android:minHeight="?android:attr/listPreferredItemHeightSmall"
-            android:drawableLeft="@drawable/ic_customer"
-            android:drawablePadding="5dp"
-            android:text="@string/menu_header"
-            android:clickable="true"
-            />
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:background="@color/sitcomHeader"/>
 
     </LinearLayout>
 

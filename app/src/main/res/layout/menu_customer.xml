@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/sitcomTableHeader">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Client xyz"
+        android:id="@+id/textView"
+        android:drawableLeft="@drawable/ic_customer"
+        android:textSize="@dimen/abc_text_size_headline_material" />
+</LinearLayout>
