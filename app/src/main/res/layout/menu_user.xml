@@ -18,8 +18,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Kimveasna PEN"
+		android:paddingLeft="10dp"
         android:id="@+id/username"
         android:gravity="left|center"
         android:drawableLeft="@drawable/ic_user"
-        android:drawableStart="@drawable/ic_user" />
+        android:drawableStart="@drawable/ic_user" 
+		android:theme="@style/menu_text"/>
 </LinearLayout>

@@ -69,8 +69,9 @@ with the content view. -->
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:choiceMode="singleChoice"
-            android:divider="@android:color/transparent"
+            android:divider="@android:color/black"
             android:dividerHeight="0dp"
+			android:background="#eee"
             />
 
     </LinearLayout>
