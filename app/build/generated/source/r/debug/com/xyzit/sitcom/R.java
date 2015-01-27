@@ -1325,12 +1325,14 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02003a;
         public static final int ic_user=0x7f02003b;
         public static final int jupiter=0x7f02003c;
-        public static final int mars=0x7f02003d;
-        public static final int mercury=0x7f02003e;
-        public static final int neptune=0x7f02003f;
-        public static final int saturn=0x7f020040;
-        public static final int uranus=0x7f020041;
-        public static final int venus=0x7f020042;
+        public static final int lapeyre_background_2=0x7f02003d;
+        public static final int mars=0x7f02003e;
+        public static final int menu_user_background=0x7f02003f;
+        public static final int mercury=0x7f020040;
+        public static final int neptune=0x7f020041;
+        public static final int saturn=0x7f020042;
+        public static final int uranus=0x7f020043;
+        public static final int venus=0x7f020044;
     }
     public static final class id {
         public static final int action_bar=0x7f090031;
@@ -1370,7 +1372,6 @@ containing a value of this type.
         public static final int icon=0x7f090026;
         public static final int ifRoom=0x7f09000e;
         public static final int image=0x7f090023;
-        public static final int imageView=0x7f090048;
         public static final int label=0x7f090046;
         public static final int left_drawer=0x7f090042;
         public static final int left_drawer2=0x7f090043;
@@ -1405,6 +1406,7 @@ containing a value of this type.
         public static final int toolbar=0x7f090041;
         public static final int up=0x7f09001d;
         public static final int useLogo=0x7f090004;
+        public static final int username=0x7f090048;
         public static final int withText=0x7f090010;
         public static final int wrap_content=0x7f090014;
     }

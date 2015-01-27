@@ -51,7 +51,7 @@ with the content view. -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_gravity="start"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="fill_parent">
 
         <ListView
