@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="store_array">
+        <item>Aubervilliers</item>
+        <item>Tours</item>
+        <item>Ivry-Sur-Seine</item>
+        <item>Les Ulis</item>
+    </string-array>
+</resources>

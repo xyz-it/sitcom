@@ -25,11 +25,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 //import android.widget.*;
 import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
-import	android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.RelativeLayout;
 
 /**
@@ -63,8 +64,8 @@ public class MainActivity extends ActionBarActivity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ListView mDrawerList2;
-	private FrameLayout mFrameLayout;
-	private Toolbar mToolbar;
+    private FrameLayout mFrameLayout;
+    private Toolbar mToolbar;
     private ActionBarDrawerToggle mDrawerToggle;
 
     private CharSequence mDrawerTitle;
@@ -75,7 +76,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		//requestWindowFeature(Window.FE
+        //requestWindowFeature(Window.FE
         setContentView(R.layout.activity_main);
 
         mTitle = mDrawerTitle = getTitle();
@@ -84,11 +85,11 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mDrawerList2 = (ListView) findViewById(R.id.left_drawer2);
-		mFrameLayout = (FrameLayout) findViewById(R.id.content_frame);
-		mToolbar = (Toolbar) findViewById(R.id.toolbar);
-		//findViewById(R.id.toolbar);
-		setSupportActionBar(mToolbar);
-		
+        mFrameLayout = (FrameLayout) findViewById(R.id.content_frame);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        //findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
@@ -98,7 +99,7 @@ public class MainActivity extends ActionBarActivity {
 
 
         String[] menuViewId = new String[7];
-        for(int i=0;i<mLeftMenuItems.length();i++){
+        for (int i = 0; i < mLeftMenuItems.length(); i++) {
             menuViewId[i] = mLeftMenuItems.getString(i);
         }
 
@@ -112,13 +113,12 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
 
-
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the sliding drawer and the action bar app icon
         mDrawerToggle = new ActionBarDrawerToggle(
                 this,                  /* host Activity */
                 mDrawerLayout,         /* DrawerLayout object */
-				mToolbar,
+                mToolbar,
                 //R.drawable.ic_drawer,  /* nav drawer image to replace 'Up' caret */
                 R.string.drawer_open,  /* "open drawer" description for accessibility */
                 R.string.drawer_close  /* "close drawer" description for accessibility */
@@ -134,11 +134,13 @@ public class MainActivity extends ActionBarActivity {
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-		
+
 
         if (savedInstanceState == null) {
             selectItem(0);
         }
+
+
     }
 
     @Override
@@ -154,7 +156,7 @@ public class MainActivity extends ActionBarActivity {
         // If the nav drawer is open, hide action items related to the content view
         //boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
         boolean drawerOpen = false;
-                menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
+        menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -166,7 +168,7 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
         // Handle action buttons
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.action_websearch:
                 // create intent to perform web search for this planet
                 Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
@@ -180,14 +182,6 @@ public class MainActivity extends ActionBarActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-        }
-    }
-
-    /* The click listner for ListView in the navigation drawer */
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
         }
     }
 
@@ -254,6 +248,14 @@ public class MainActivity extends ActionBarActivity {
             ((ImageView) rootView.findViewById(R.id.image)).setImageResource(imageId);
             getActivity().setTitle(planet);
             return rootView;
+        }
+    }
+
+    /* The click listner for ListView in the navigation drawer */
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            selectItem(position);
         }
     }
 }

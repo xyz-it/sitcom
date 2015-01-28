@@ -19,6 +19,7 @@ public final class R {
     public static final class array {
         public static final int menu_items=0x7f060000;
         public static final int planets_array=0x7f060001;
+        public static final int store_array=0x7f060002;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1318,21 +1319,29 @@ containing a value of this type.
         public static final int action_search=0x7f020033;
         public static final int drawer_shadow=0x7f020034;
         public static final int earth=0x7f020035;
-        public static final int ic_customer=0x7f020036;
-        public static final int ic_drawer=0x7f020037;
-        public static final int ic_general=0x7f020038;
-        public static final int ic_lapeyre_background=0x7f020039;
-        public static final int ic_launcher=0x7f02003a;
-        public static final int ic_user=0x7f02003b;
-        public static final int jupiter=0x7f02003c;
-        public static final int lapeyre_background_2=0x7f02003d;
-        public static final int mars=0x7f02003e;
-        public static final int menu_user_background=0x7f02003f;
-        public static final int mercury=0x7f020040;
-        public static final int neptune=0x7f020041;
-        public static final int saturn=0x7f020042;
-        public static final int uranus=0x7f020043;
-        public static final int venus=0x7f020044;
+        public static final int ic_action_action_view_quilt=0x7f020036;
+        public static final int ic_action_maps_local_shipping=0x7f020037;
+        public static final int ic_action_social_person=0x7f020038;
+        public static final int ic_customer=0x7f020039;
+        public static final int ic_drawer=0x7f02003a;
+        public static final int ic_euro=0x7f02003b;
+        public static final int ic_general=0x7f02003c;
+        public static final int ic_lapeyre_background=0x7f02003d;
+        public static final int ic_launcher=0x7f02003e;
+        public static final int ic_settings=0x7f02003f;
+        public static final int ic_shopping_cart=0x7f020040;
+        public static final int ic_store=0x7f020041;
+        public static final int ic_user=0x7f020042;
+        public static final int jupiter=0x7f020043;
+        public static final int lapeyre_background_2=0x7f020044;
+        public static final int lapeyre_logo=0x7f020045;
+        public static final int mars=0x7f020046;
+        public static final int menu_user_background=0x7f020047;
+        public static final int mercury=0x7f020048;
+        public static final int neptune=0x7f020049;
+        public static final int saturn=0x7f02004a;
+        public static final int uranus=0x7f02004b;
+        public static final int venus=0x7f02004c;
     }
     public static final class id {
         public static final int action_bar=0x7f090031;
@@ -1348,7 +1357,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09002e;
         public static final int action_mode_bar_stub=0x7f09002d;
         public static final int action_mode_close_button=0x7f090020;
-        public static final int action_websearch=0x7f090049;
+        public static final int action_websearch=0x7f09004b;
         public static final int activity_chooser_view_content=0x7f090021;
         public static final int always=0x7f09000f;
         public static final int beginning=0x7f09000a;
@@ -1372,6 +1381,7 @@ containing a value of this type.
         public static final int icon=0x7f090026;
         public static final int ifRoom=0x7f09000e;
         public static final int image=0x7f090023;
+        public static final int imageView=0x7f090048;
         public static final int label=0x7f090046;
         public static final int left_drawer=0x7f090042;
         public static final int left_drawer2=0x7f090043;
@@ -1406,7 +1416,8 @@ containing a value of this type.
         public static final int toolbar=0x7f090041;
         public static final int up=0x7f09001d;
         public static final int useLogo=0x7f090004;
-        public static final int username=0x7f090048;
+        public static final int user_store=0x7f09004a;
+        public static final int username=0x7f090049;
         public static final int withText=0x7f090010;
         public static final int wrap_content=0x7f090014;
     }
@@ -1541,18 +1552,18 @@ containing a value of this type.
         public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f0d0037;
         public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0d0038;
         public static final int Base_ThemeOverlay_AppCompat_Light=0x7f0d0039;
-        public static final int Base_V11_Theme_AppCompat=0x7f0d00e1;
-        public static final int Base_V11_Theme_AppCompat_Dialog=0x7f0d00e2;
-        public static final int Base_V11_Theme_AppCompat_Light=0x7f0d00e3;
-        public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f0d00e4;
-        public static final int Base_V14_Theme_AppCompat=0x7f0d00e5;
-        public static final int Base_V14_Theme_AppCompat_Dialog=0x7f0d00e6;
-        public static final int Base_V14_Theme_AppCompat_Light=0x7f0d00e7;
-        public static final int Base_V14_Theme_AppCompat_Light_Dialog=0x7f0d00e8;
-        public static final int Base_V21_Theme_AppCompat=0x7f0d00e9;
-        public static final int Base_V21_Theme_AppCompat_Dialog=0x7f0d00ea;
-        public static final int Base_V21_Theme_AppCompat_Light=0x7f0d00eb;
-        public static final int Base_V21_Theme_AppCompat_Light_Dialog=0x7f0d00ec;
+        public static final int Base_V11_Theme_AppCompat=0x7f0d00e2;
+        public static final int Base_V11_Theme_AppCompat_Dialog=0x7f0d00e3;
+        public static final int Base_V11_Theme_AppCompat_Light=0x7f0d00e4;
+        public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f0d00e5;
+        public static final int Base_V14_Theme_AppCompat=0x7f0d00e6;
+        public static final int Base_V14_Theme_AppCompat_Dialog=0x7f0d00e7;
+        public static final int Base_V14_Theme_AppCompat_Light=0x7f0d00e8;
+        public static final int Base_V14_Theme_AppCompat_Light_Dialog=0x7f0d00e9;
+        public static final int Base_V21_Theme_AppCompat=0x7f0d00ea;
+        public static final int Base_V21_Theme_AppCompat_Dialog=0x7f0d00eb;
+        public static final int Base_V21_Theme_AppCompat_Light=0x7f0d00ec;
+        public static final int Base_V21_Theme_AppCompat_Light_Dialog=0x7f0d00ed;
         public static final int Base_V7_Theme_AppCompat=0x7f0d003a;
         public static final int Base_V7_Theme_AppCompat_Dialog=0x7f0d003b;
         public static final int Base_V7_Theme_AppCompat_Light=0x7f0d003c;
@@ -1720,6 +1731,7 @@ containing a value of this type.
         public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0d00de;
         public static final int Widget_AppCompat_Toolbar=0x7f0d00df;
         public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0d00e0;
+        public static final int menu_text=0x7f0d00e1;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.
