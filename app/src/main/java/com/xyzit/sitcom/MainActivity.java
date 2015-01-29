@@ -3,9 +3,7 @@ package com.xyzit.sitcom;
 
 import java.util.Locale;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -14,7 +12,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,13 +22,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.Toast;
 //import android.widget.*;
 import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.widget.RelativeLayout;
 
 /**
  * This example illustrates a common usage of the DrawerLayout widget
@@ -112,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.lapeyre_logo);
+        getSupportActionBar().setLogo(R.drawable.lapeyre_logo2);
 
 
         // ActionBarDrawerToggle ties together the the proper interactions
