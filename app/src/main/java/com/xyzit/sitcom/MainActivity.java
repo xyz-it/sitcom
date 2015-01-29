@@ -107,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.lapeyre_logo2);
+        getSupportActionBar().setLogo(R.drawable.lapeyre_logo);
 
 
         // ActionBarDrawerToggle ties together the the proper interactions
