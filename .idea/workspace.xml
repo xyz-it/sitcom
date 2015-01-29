@@ -48,21 +48,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.xyzit.sitcom" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="166219c6-4f11-496a-be3d-d9ffc94c9808" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_store.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_store.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_store.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_store.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/store_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_user.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_user.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_user.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_user.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_user.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_user.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_user.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_user.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/LeftMenuAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/LeftMenuAdapter.java" />
+    <list default="true" id="166219c6-4f11-496a-be3d-d9ffc94c9808" name="Default" comment="Menu v0.1 - add resources">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/xyzit/sitcom/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/xyzit/sitcom/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu_user.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_user.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="My Application.iws" />
@@ -89,12 +77,12 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="3555">
-              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="917" max-vertical-offset="3585">
+              <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
               <folding>
-                <element signature="e#5320#5340#0" expanded="true" />
-                <element signature="e#5409#5430#0" expanded="true" />
-                <element signature="e#7618#7644#0" expanded="true" />
+                <element signature="e#5446#5466#0" expanded="true" />
+                <element signature="e#5535#5556#0" expanded="true" />
+                <element signature="e#7744#7770#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,8 +111,8 @@
       <file leaf-file-name="activity_main.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1290">
-              <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1305">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -1198,11 +1186,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu_customer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu_header.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/menu_user_background.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/store_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/LeftMenuAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu_user.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1272,6 +1260,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="My Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitcom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="AndroidView" />
@@ -1286,7 +1296,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="03a9c6c49e48b760" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Android2.2" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="55" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="56" />
@@ -1524,7 +1534,11 @@
       <created>1422317756977</created>
       <updated>1422317756977</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Menu v0.1 - laptop">
+      <created>1422423941701</created>
+      <updated>1422423941701</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1603,32 +1617,34 @@
     <MESSAGE value="New Menu" />
     <MESSAGE value="New version - laptop" />
     <MESSAGE value="Menu v0.1 - laptop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu v0.1 - laptop" />
+    <MESSAGE value="Menu v0.1 - add resources" />
+    <MESSAGE value="Menu v0.1 - laptop&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu v0.1 - laptop&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java</url>
-          <line>257</line>
+          <line>259</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java</url>
-          <line>131</line>
+          <line>133</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java</url>
-          <line>126</line>
+          <line>128</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java</url>
-          <line>198</line>
+          <line>200</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -1645,9 +1661,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1334" max-vertical-offset="3975">
           <caret line="99" column="42" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
           <folding>
-            <element signature="e#5320#5340#0" expanded="true" />
-            <element signature="e#5409#5430#0" expanded="true" />
-            <element signature="e#7618#7644#0" expanded="true" />
+            <element signature="e#5446#5466#0" expanded="true" />
+            <element signature="e#5535#5556#0" expanded="true" />
+            <element signature="e#7744#7770#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1894,18 +1910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="3555">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding>
-            <element signature="e#5320#5340#0" expanded="true" />
-            <element signature="e#5409#5430#0" expanded="true" />
-            <element signature="e#7618#7644#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/LeftMenuAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="647" max-vertical-offset="1095">
@@ -1936,10 +1940,22 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xyzit/sitcom/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="917" max-vertical-offset="3585">
+          <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
+          <folding>
+            <element signature="e#5446#5466#0" expanded="true" />
+            <element signature="e#5535#5556#0" expanded="true" />
+            <element signature="e#7744#7770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1290">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1305">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
           <folding />
         </state>
       </provider>

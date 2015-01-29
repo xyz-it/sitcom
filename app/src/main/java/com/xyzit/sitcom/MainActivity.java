@@ -111,6 +111,8 @@ public class MainActivity extends ActionBarActivity {
         // enable ActionBar app icon to behave as action to toggle nav drawer
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.lapeyre_logo);
 
 
         // ActionBarDrawerToggle ties together the the proper interactions
