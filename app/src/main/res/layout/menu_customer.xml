@@ -4,6 +4,7 @@
     android:layout_width="match_parent" 
 	android:gravity="left|center"
 	android:layout_height="50dp"
+	android:clickable="false"
     >
 
     <TextView
@@ -15,6 +16,7 @@
 		android:paddingLeft="10dp"
 		android:textColor="#333"
         android:id="@+id/textView"
+		android:clickable="false"
         android:drawableLeft="@drawable/ic_action_social_person"
         android:textSize="20sp" />
 </LinearLayout>

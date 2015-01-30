@@ -35,10 +35,10 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:logo="@drawable/lapeyre_logo"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:background="?attr/colorPrimaryDark"/>
+            android:background="?attr/colorPrimaryDark"
+			/>
 
     </FrameLayout>
 
@@ -55,7 +55,7 @@ with the content view. -->
         android:layout_width="300dp"
         android:layout_height="fill_parent">
 
-        <ListView
+        <!--<ListView
             android:id="@+id/left_drawer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@ with the content view. -->
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
             android:background="#eee"
-            android:visibility="gone" />
+            android:visibility="gone" />-->
 
         <ListView
             android:id="@+id/left_drawer2"

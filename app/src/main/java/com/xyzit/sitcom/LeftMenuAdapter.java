@@ -74,6 +74,7 @@ public class LeftMenuAdapter extends ArrayAdapter<String> {
 
         }
 
+		rowView.setClickable(false);
         return rowView;
 	}
 	}

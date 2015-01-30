@@ -57,7 +57,7 @@ import android.support.v7.app.ActionBarActivity;
  */
 public class MainActivity extends ActionBarActivity {
     private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
+    //private ListView mDrawerList;
     private ListView mDrawerList2;
     private FrameLayout mFrameLayout;
     private Toolbar mToolbar;
@@ -78,7 +78,7 @@ public class MainActivity extends ActionBarActivity {
         mLeftMenuItems = getResources().obtainTypedArray(R.array.menu_items);
         mPlanetTitles = getResources().getStringArray(R.array.planets_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        //mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mDrawerList2 = (ListView) findViewById(R.id.left_drawer2);
         mFrameLayout = (FrameLayout) findViewById(R.id.content_frame);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -88,9 +88,9 @@ public class MainActivity extends ActionBarActivity {
         // set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, mPlanetTitles));
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        //mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+        //        R.layout.drawer_list_item, mPlanetTitles));
+        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
 
         String[] menuViewId = new String[7];
@@ -101,13 +101,14 @@ public class MainActivity extends ActionBarActivity {
 
         mDrawerList2.setAdapter(new LeftMenuAdapter(this,
                 R.layout.drawer_list_item, menuViewId));
-
-
+		mDrawerList2.setOnItemClickListener(new DrawerItemClickListener());
+		Toast.makeText(this, "click", Toast.LENGTH_LONG);
+		
         // enable ActionBar app icon to behave as action to toggle nav drawer
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.lapeyre_logo);
+        //getSupportActionBar().setLogo(R.drawable.logo);
 
 
         // ActionBarDrawerToggle ties together the the proper interactions
@@ -184,18 +185,20 @@ public class MainActivity extends ActionBarActivity {
 
     private void selectItem(int position) {
         // update the main content by replacing fragments
-        Fragment fragment = new PlanetFragment();
-        Bundle args = new Bundle();
-        args.putInt(PlanetFragment.ARG_PLANET_NUMBER, position);
+        //Fragment fragment = new PlanetFragment();
+        //Bundle args = new Bundle();
+        //args.putInt(PlanetFragment.ARG_PLANET_NUMBER, position);
         //fragment.setArguments(args);
 
         //FragmentManager fragmentManager = getFragmentManager();
         //fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
         // update selected item and title, then close the drawer
-        mDrawerList.setItemChecked(position, true);
-        setTitle(mPlanetTitles[position]);
-        //mDrawerLayout.closeDrawer(mDrawerList);
+        mDrawerList2.setItemChecked(position, true);
+		String text = Integer.toString(position);
+		Toast.makeText(this, text, Toast.LENGTH_LONG);
+        //setTitle(mPlanetTitles[position]);
+        //mDrawerLayout.closeDrawer(mDrawerList2);
     }
 
     @Override
@@ -252,7 +255,8 @@ public class MainActivity extends ActionBarActivity {
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
+            Toast.makeText(view.getContext(), "click", Toast.LENGTH_LONG);
+			selectItem(position);
         }
     }
 }
