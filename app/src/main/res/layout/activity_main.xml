@@ -34,11 +34,15 @@
 
 
         <android.support.v7.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/toolbar"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:background="?attr/colorPrimaryDark"
-			/>
+            app:showAsAction="ifRoom"
+            >
+
+            </android.support.v7.widget.Toolbar>
 
     </FrameLayout>
 
@@ -51,6 +55,7 @@ with the content view. -->
 
     <LinearLayout
         android:orientation="vertical"
+        android:id="@+id/leftMenu"
         android:layout_gravity="start"
         android:layout_width="300dp"
         android:layout_height="fill_parent">

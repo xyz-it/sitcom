@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 //import android.widget.*;
@@ -60,13 +61,16 @@ public class MainActivity extends ActionBarActivity {
     //private ListView mDrawerList;
     private ListView mDrawerList2;
     private FrameLayout mFrameLayout;
+    private LinearLayout mleftMenu;
     private Toolbar mToolbar;
     private ActionBarDrawerToggle mDrawerToggle;
 
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
-    private String[] mPlanetTitles;
+    //private String[] mPlanetTitles;
+    private String[] mTitles;
     private TypedArray mLeftMenuItems;
+    private TypedArray mIcons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,9 +80,12 @@ public class MainActivity extends ActionBarActivity {
 
         mTitle = mDrawerTitle = getTitle();
         mLeftMenuItems = getResources().obtainTypedArray(R.array.menu_items);
-        mPlanetTitles = getResources().getStringArray(R.array.planets_array);
+        mIcons = getResources().obtainTypedArray(R.array.icons);
+        //mPlanetTitles = getResources().getStringArray(R.array.planets_array);
+        mTitles = getResources().getStringArray(R.array.panel_titles);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         //mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        mleftMenu = (LinearLayout) findViewById(R.id.leftMenu);
         mDrawerList2 = (ListView) findViewById(R.id.left_drawer2);
         mFrameLayout = (FrameLayout) findViewById(R.id.content_frame);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -105,10 +112,15 @@ public class MainActivity extends ActionBarActivity {
 		Toast.makeText(this, "click", Toast.LENGTH_LONG);
 		
         // enable ActionBar app icon to behave as action to toggle nav drawer
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(false);
+        getSupportActionBar().setDisplayUseLogoEnabled(false);
+        getSupportActionBar().setIcon(R.drawable.ic_logo);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_logo);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-        //getSupportActionBar().setLogo(R.drawable.logo);
+
+        getSupportActionBar().setTitle("");
 
 
         // ActionBarDrawerToggle ties together the the proper interactions
@@ -152,8 +164,8 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
-        //boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        boolean drawerOpen = false;
+        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mleftMenu);
+        //boolean drawerOpen = false;
         menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
@@ -170,7 +182,7 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_websearch:
                 // create intent to perform web search for this planet
                 Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-                intent.putExtra(SearchManager.QUERY, getActionBar().getTitle());
+                intent.putExtra(SearchManager.QUERY, getSupportActionBar().getTitle());
                 // catch event that there's no activity to handle intent
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
@@ -195,10 +207,12 @@ public class MainActivity extends ActionBarActivity {
 
         // update selected item and title, then close the drawer
         mDrawerList2.setItemChecked(position, true);
-		String text = Integer.toString(position);
-		Toast.makeText(this, text, Toast.LENGTH_LONG);
-        //setTitle(mPlanetTitles[position]);
-        //mDrawerLayout.closeDrawer(mDrawerList2);
+		//String text = Integer.toString(position);
+		//Toast.makeText(this, text, Toast.LENGTH_LONG);
+
+        //getSupportActionBar().setLogo(mIcons.getDrawable(position));
+        //setTitle(mTitles[position]);
+        mDrawerLayout.closeDrawer(mleftMenu);
     }
 
     @Override
@@ -229,7 +243,7 @@ public class MainActivity extends ActionBarActivity {
     /**
      * Fragment that appears in the "content_frame", shows a planet
      */
-    public static class PlanetFragment extends Fragment {
+    /*public static class PlanetFragment extends Fragment {
         public static final String ARG_PLANET_NUMBER = "planet_number";
 
         public PlanetFragment() {
@@ -249,7 +263,7 @@ public class MainActivity extends ActionBarActivity {
             getActivity().setTitle(planet);
             return rootView;
         }
-    }
+    }*/
 
     /* The click listner for ListView in the navigation drawer */
     private class DrawerItemClickListener implements ListView.OnItemClickListener {

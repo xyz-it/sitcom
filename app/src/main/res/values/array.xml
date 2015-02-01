@@ -7,7 +7,27 @@
         <item>menu_financing</item>
         <item>menu_delivery</item>
         <item>menu_installation</item>
-
-
     </string-array>
+
+    <string-array name="panel_titles">
+        <item>Profil</item>
+        <item>Fiche client</item>
+        <item>Général</item>
+        <item>Panier</item>
+        <item>Financement</item>
+        <item>Livraison</item>
+        <item>Installation</item>
+    </string-array>
+
+    <array name="icons">
+        <item>@drawable/ic_store</item>
+        <item>@drawable/ic_customer</item>
+        <item>@drawable/ic_action_action_view_quilt</item>
+        <item>@drawable/ic_shopping_cart</item>
+        <item>@drawable/ic_euro</item>
+        <item>@drawable/ic_action_maps_local_shipping</item>
+        <item>@drawable/ic_settings</item>
+    </array>
+
+
 </resources>
