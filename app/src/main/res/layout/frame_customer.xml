@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:entries="@array/civility"
+        android:ems="10"
+        android:textColor="#404041"
+        android:hint="Civilité"
+        android:textColorHint="@android:color/darker_gray" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:textColor="#404041"
+        android:hint="Nom"
+        android:textColorHint="@android:color/darker_gray"
+        android:backgroundTint="#aaa"
+        android:backgroundTintMode="multiply" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#404041"
+        android:hint="Prénom"
+        android:textColorHint="@android:color/darker_gray"
+        android:backgroundTint="#aaa"
+        android:backgroundTintMode="add" />
+</LinearLayout>

@@ -19,15 +19,32 @@
         <item>Installation</item>
     </string-array>
 
+    <string-array name="frames">
+        <item>frame_user</item>
+        <item>frame_customer</item>
+        <item>frame_header</item>
+        <item>frame_cart</item>
+        <item>frame_financing</item>
+        <item>frame_delivery</item>
+        <item>frame_installation</item>
+    </string-array>
+
+
     <array name="icons">
-        <item>@drawable/ic_store</item>
-        <item>@drawable/ic_customer</item>
-        <item>@drawable/ic_action_action_view_quilt</item>
-        <item>@drawable/ic_shopping_cart</item>
-        <item>@drawable/ic_euro</item>
-        <item>@drawable/ic_action_maps_local_shipping</item>
-        <item>@drawable/ic_settings</item>
+        <item>@drawable/ic_store_white</item>
+        <item>@drawable/ic_person_white</item>
+        <item>@drawable/ic_general_white</item>
+        <item>@drawable/ic_shopping_cart_white</item>
+        <item>@drawable/ic_euro_white</item>
+        <item>@drawable/ic_truck_white</item>
+        <item>@drawable/ic_settings_white</item>
     </array>
 
+    <string-array name="civility">
+        <item>M.</item>
+        <item>Mme</item>
+        <item>Société</item>
+        <item>Administration</item>
+    </string-array>
 
 </resources>

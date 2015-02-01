@@ -1,33 +1,28 @@
 package com.xyzit.sitcom;
 
 
-import java.util.Locale;
-
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.view.LayoutInflater;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
+
 //import android.widget.*;
-import android.support.v7.widget.Toolbar;
-import android.widget.FrameLayout;
-import android.support.v7.app.ActionBarActivity;
 
 /**
  * This example illustrates a common usage of the DrawerLayout widget
@@ -60,7 +55,7 @@ public class MainActivity extends ActionBarActivity {
     private DrawerLayout mDrawerLayout;
     //private ListView mDrawerList;
     private ListView mDrawerList2;
-    private FrameLayout mFrameLayout;
+    private View mFrameLayout;
     private LinearLayout mleftMenu;
     private Toolbar mToolbar;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -69,8 +64,10 @@ public class MainActivity extends ActionBarActivity {
     private CharSequence mTitle;
     //private String[] mPlanetTitles;
     private String[] mTitles;
+    private String[] mFrames;
     private TypedArray mLeftMenuItems;
     private TypedArray mIcons;
+    private View mainFrame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,11 +80,13 @@ public class MainActivity extends ActionBarActivity {
         mIcons = getResources().obtainTypedArray(R.array.icons);
         //mPlanetTitles = getResources().getStringArray(R.array.planets_array);
         mTitles = getResources().getStringArray(R.array.panel_titles);
+        mFrames = getResources().getStringArray(R.array.frames);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         //mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mleftMenu = (LinearLayout) findViewById(R.id.leftMenu);
         mDrawerList2 = (ListView) findViewById(R.id.left_drawer2);
-        mFrameLayout = (FrameLayout) findViewById(R.id.content_frame);
+        mFrameLayout = findViewById(R.id.content_frame);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         //findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -113,10 +112,10 @@ public class MainActivity extends ActionBarActivity {
 		
         // enable ActionBar app icon to behave as action to toggle nav drawer
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(false);
+        //getSupportActionBar().setHomeButtonEnabled(false);
         getSupportActionBar().setDisplayUseLogoEnabled(false);
-        getSupportActionBar().setIcon(R.drawable.ic_logo);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setLogo(R.drawable.ic_logo);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_logo);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -134,16 +133,18 @@ public class MainActivity extends ActionBarActivity {
                 R.string.drawer_close  /* "close drawer" description for accessibility */
         ) {
             public void onDrawerClosed(View view) {
-                getSupportActionBar().setTitle(mTitle);
+                //getSupportActionBar().setTitle(mTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 
             public void onDrawerOpened(View drawerView) {
-                getSupportActionBar().setTitle(mDrawerTitle);
+                //getSupportActionBar().setTitle(mDrawerTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+        //mDrawerToggle.setDrawerIndicatorEnabled(false);
+        mDrawerToggle.setHomeAsUpIndicator(R.drawable.ic_euro);
 
 
         if (savedInstanceState == null) {
@@ -166,7 +167,7 @@ public class MainActivity extends ActionBarActivity {
         // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mleftMenu);
         //boolean drawerOpen = false;
-        menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
+        //menu.findItem(R.id.action_websearch).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -205,14 +206,37 @@ public class MainActivity extends ActionBarActivity {
         //FragmentManager fragmentManager = getFragmentManager();
         //fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
+        displayFrame(position);
+
+
         // update selected item and title, then close the drawer
         mDrawerList2.setItemChecked(position, true);
 		//String text = Integer.toString(position);
 		//Toast.makeText(this, text, Toast.LENGTH_LONG);
 
-        //getSupportActionBar().setLogo(mIcons.getDrawable(position));
-        //setTitle(mTitles[position]);
+        getSupportActionBar().setIcon(mIcons.getDrawable(position));
+        setTitle(mTitles[position]);
+
+
         mDrawerLayout.closeDrawer(mleftMenu);
+    }
+
+    private void displayFrame(int position) {
+
+        int frameId = getResources().getIdentifier(mFrames[position],
+                "layout", getPackageName());
+
+
+        Fragment fragment = new MainFragment();
+        Bundle args = new Bundle();
+        args.putInt(MainFragment.ARG_FRAGMENT_ID, frameId);
+        fragment.setArguments(args);
+
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.mainFrame, fragment).commit();
+
+
+
     }
 
     @Override

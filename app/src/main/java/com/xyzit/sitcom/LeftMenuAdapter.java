@@ -1,18 +1,11 @@
 package com.xyzit.sitcom;
 
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.app.*;
-
-import java.util.Locale;
 
 public class LeftMenuAdapter extends ArrayAdapter<String> {
 	private final Context context;
@@ -74,7 +67,7 @@ public class LeftMenuAdapter extends ArrayAdapter<String> {
 
         }
 
-		rowView.setClickable(false);
+		//rowView.setClickable(false);
         return rowView;
 	}
 	}
