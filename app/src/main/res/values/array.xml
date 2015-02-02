@@ -47,4 +47,9 @@
         <item>Administration</item>
     </string-array>
 
+	<string-array name="countries">
+        <item>France</item>
+        <item>Suisse</item>
+       
+    </string-array>
 </resources>

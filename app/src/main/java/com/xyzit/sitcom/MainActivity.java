@@ -144,8 +144,8 @@ public class MainActivity extends ActionBarActivity {
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         //mDrawerToggle.setDrawerIndicatorEnabled(false);
-        mDrawerToggle.setHomeAsUpIndicator(R.drawable.ic_euro);
-
+        //mDrawerToggle.setHomeAsUpIndicator(R.drawable.ic_logo);
+	
 
         if (savedInstanceState == null) {
             selectItem(0);

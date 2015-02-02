@@ -48,5 +48,22 @@
             android:layout_gravity="left|center_vertical"
             android:textAlignment="textStart" />
     </LinearLayout>
-
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="2 590,90 €"
+		android:textSize="30sp"
+		android:id="@+id/total"
+		android:gravity="right|center"
+		android:textColor="@android:color/white"
+		android:layout_marginRight="20dp"/>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="(2 159,08 € HT)"
+		android:textSize="20sp"
+		android:id="@+id/total"
+		android:gravity="right|center"
+		android:textColor="@android:color/white"
+		android:layout_marginRight="20dp"/>
 </LinearLayout>
