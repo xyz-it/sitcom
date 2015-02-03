@@ -2,17 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
-
+    >
+	<TextView 
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:gravity="left|center_vertical"
+		android:text="Client"
+		android:textColor="@color/colorPrimary"
+		android:drawableLeft="@drawable/ic_customer"
+		android:drawableBottom="#000">
+		
+	</TextView>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/civility"
         android:entries="@array/civility"
         android:ems="10"
-        android:textColor="#404041"
         android:hint="Civilité"
-        android:textColorHint="#eee" />
+		/>
 
     <EditText
         android:layout_width="match_parent"
@@ -20,11 +28,8 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editText"
-        android:textColor="#404041"
         android:hint="Nom"
-        android:textColorHint="#eee"
-        android:backgroundTint="#aaa"
-        android:backgroundTintMode="multiply" />
+		/>
 
     <EditText
         android:layout_width="match_parent"
@@ -33,11 +38,11 @@
         android:ems="10"
         android:id="@+id/editText2"
         android:layout_gravity="center_horizontal"
-        android:textColor="#404041"
+        
         android:hint="Prénom"
-        android:textColorHint="#eee"
-        android:backgroundTint="#aaa"
-        android:backgroundTintMode="add" />
+        
+        
+         />
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="fill_parent"
@@ -48,22 +53,18 @@
 			android:ems="10"
 			android:id="@+id/street_no"
 			android:layout_gravity="center_horizontal"
-			android:textColor="#404041"
+			
 			android:hint="N°"
-			android:textColorHint="#eee"
-			android:backgroundTint="#aaa"
-			android:backgroundTintMode="add" />
+		    />
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:ems="10"
 			android:id="@+id/street"
 			android:layout_gravity="center_horizontal"
-			android:textColor="#404041"
+			
 			android:hint="Rue"
-			android:textColorHint="#eee"
-			android:backgroundTint="#aaa"
-			android:backgroundTintMode="add" />
+			 />
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
@@ -75,22 +76,18 @@
 			android:ems="10"
 			android:id="@+id/floor"
 			android:layout_gravity="center_horizontal"
-			android:textColor="#404041"
+			
 			android:hint="Etage"
-			android:textColorHint="#eee"
-			android:backgroundTint="#aaa"
-			android:backgroundTintMode="add" />
+			/>
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:ems="10"
 			android:id="@+id/building"
 			android:layout_gravity="center_horizontal"
-			android:textColor="#404041"
+			
 			android:hint="Batiment, Immeuble"
-			android:textColorHint="#eee"
-			android:backgroundTint="#aaa"
-			android:backgroundTintMode="add" />
+			/>
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
@@ -102,22 +99,18 @@
 			android:ems="10"
 			android:id="@+id/zip_code"
 			android:layout_gravity="center_horizontal"
-			android:textColor="#404041"
+			
 			android:hint="Code postal"
-			android:textColorHint="#eee"
-			android:backgroundTint="#aaa"
-			android:backgroundTintMode="add" />
+			/>
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:ems="10"
 			android:id="@+id/city"
 			android:layout_gravity="center_horizontal"
-			android:textColor="#404041"
+			
 			android:hint="Ville"
-			android:textColorHint="#eee"
-			android:backgroundTint="#aaa"
-			android:backgroundTintMode="add" />
+			 />
 	</LinearLayout>
 	<Spinner
         android:layout_width="wrap_content"
@@ -125,7 +118,7 @@
         android:id="@+id/country"
         android:entries="@array/countries"
         android:ems="10"
-        android:textColor="#404041"
+        
         android:hint="Pays"
-        android:textColorHint="#eee" />
+         />
 </LinearLayout>
