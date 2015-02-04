@@ -2,13 +2,16 @@
 <resources>
     <style name="AppTheme" parent="AppTheme.Base"/>
     <!--<style name="AppTheme.Base" parent="Theme.AppCompat">-->
-	<style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+	<style name="AppTheme.Base" parent="Theme.AppCompat.Light">
 	
-        <!--<item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>-->
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+		<item name="android:editTextStyle">@style/EditTextSitcomTheme</item>
+		<item name="android:spinnerStyle">@style/SpinnerSitcomTheme</item>
+		<item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemSitcomTheme</item>
         <!--<item name="android:spinnerItemStyle">@style/SitcomSpinnerItemStyle</item>-->
     </style>
 
@@ -26,4 +29,9 @@
     <style name="SitcomSpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
         <item name="android:textColor">#404041</item>
     </style>
+	
+	<style name="SitcomToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="android:background">#404041</item>
+		<item name="android:textColorPrimary">#fFF</item>
+	</style>
 </resources>

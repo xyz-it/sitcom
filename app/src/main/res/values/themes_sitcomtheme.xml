@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="SitcomTheme" parent="@style/_SitcomTheme"/>
+
+  <style name="_SitcomTheme" parent="Theme.AppCompat.Light">
+
+	  <item name="android:windowNoTitle">true</item>
+	  
+	  <item name="windowActionBar">false</item>
+	  
+    <item name="android:editTextStyle">@style/EditTextSitcomTheme</item>
+
+    <item name="android:spinnerStyle">@style/SpinnerSitcomTheme</item>
+
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemSitcomTheme</item>
+
+  </style>
+
+</resources>
