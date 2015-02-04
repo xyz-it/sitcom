@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="SitcomTheme" parent="@style/_SitcomTheme"/>
+
+  <style name="_SitcomTheme" parent="Theme.AppCompat.Light">
+
+    <item name="android:editTextBackground">@drawable/sitcomtheme_edit_text_holo_light</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerSitcomTheme</item>
+
+  </style>
+
+</resources>

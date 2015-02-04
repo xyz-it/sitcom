@@ -100,7 +100,7 @@
 			android:id="@+id/zip_code"
 			android:layout_gravity="center_horizontal"
 			
-			android:hint="Code postal"
+			android:hint="CP"
 			/>
 		<EditText
 			android:layout_width="fill_parent"
