@@ -4,13 +4,14 @@
     android:layout_height="match_parent"
     >
 	<TextView 
-		android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+        android:layout_height="30dp"
 		android:gravity="left|center_vertical"
-		android:text="Client"
-		android:textColor="@color/colorPrimary"
-		android:drawableLeft="@drawable/ic_customer"
-		android:drawableBottom="#000">
+		android:text="Identité"
+		android:textColor="@android:color/white"
+		android:paddingLeft="10dp"
+		
+		android:background="@drawable/border">
 		
 	</TextView>
     <Spinner
@@ -43,6 +44,17 @@
         
         
          />
+	<TextView 
+		android:layout_width="match_parent"
+        android:layout_height="30dp"
+		android:gravity="left|center_vertical"
+		android:text="Adresse"
+		android:textColor="@android:color/white"
+		android:paddingLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/border">
+
+	</TextView>
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="fill_parent"
@@ -121,4 +133,9 @@
         
         android:hint="Pays"
          />
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Livraison à une autre adresse ?"
+		 />
 </LinearLayout>
