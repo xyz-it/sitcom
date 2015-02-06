@@ -45,6 +45,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/user_store"
+			android:textColor="@android:color/white"
             android:layout_gravity="left|center_vertical"
             android:textAlignment="textStart" />
     </LinearLayout>

@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+>
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar_customer"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:minHeight="?attr/actionBarSize"
+		android:background="#525252"
+	>
+	<Button
+		android:layout_height="30dp"
+		android:layout_width="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:textColor="@android:color/white"
+		android:text="Livraison à une autre adresse ?"
+		android:background="@drawable/buttonshape"
+		android:shadowColor="#A8A8A8"
+		android:shadowDx="2"
+		android:shadowDy="2"
+		android:layout_marginTop="2dp"
+		android:layout_marginBottom="2dp"
+	/>
+	</android.support.v7.widget.Toolbar>
 	<TextView 
 		android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -9,9 +31,9 @@
 		android:text="Identité"
 		android:textColor="@android:color/white"
 		android:paddingLeft="10dp"
-		
+		android:drawableLeft="@drawable/ic_person_white"
 		android:background="@drawable/border">
-		
+
 	</TextView>
     <Spinner
         android:layout_width="wrap_content"
@@ -20,7 +42,7 @@
         android:entries="@array/civility"
         android:ems="10"
         android:hint="Civilité"
-		/>
+	/>
 
     <EditText
         android:layout_width="match_parent"
@@ -29,7 +51,7 @@
         android:ems="10"
         android:id="@+id/editText"
         android:hint="Nom"
-		/>
+	/>
 
     <EditText
         android:layout_width="match_parent"
@@ -38,11 +60,11 @@
         android:ems="10"
         android:id="@+id/editText2"
         android:layout_gravity="center_horizontal"
-        
+
         android:hint="Prénom"
-        
-        
-         />
+
+
+	/>
 	<TextView 
 		android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -51,6 +73,7 @@
 		android:textColor="@android:color/white"
 		android:paddingLeft="10dp"
 		android:layout_marginTop="10dp"
+		android:drawableLeft="@drawable/ic_home"
 		android:background="@drawable/border">
 
 	</TextView>
@@ -64,18 +87,18 @@
 			android:ems="10"
 			android:id="@+id/street_no"
 			android:layout_gravity="center_horizontal"
-			
+
 			android:hint="N°"
-		    />
+		/>
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:ems="10"
 			android:id="@+id/street"
 			android:layout_gravity="center_horizontal"
-			
+
 			android:hint="Rue"
-			 />
+		/>
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
@@ -87,18 +110,18 @@
 			android:ems="10"
 			android:id="@+id/floor"
 			android:layout_gravity="center_horizontal"
-			
+
 			android:hint="Etage"
-			/>
+		/>
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:ems="10"
 			android:id="@+id/building"
 			android:layout_gravity="center_horizontal"
-			
+
 			android:hint="Batiment, Immeuble"
-			/>
+		/>
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
@@ -110,18 +133,18 @@
 			android:ems="10"
 			android:id="@+id/zip_code"
 			android:layout_gravity="center_horizontal"
-			
+
 			android:hint="CP"
-			/>
+		/>
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:ems="10"
 			android:id="@+id/city"
 			android:layout_gravity="center_horizontal"
-			
+
 			android:hint="Ville"
-			 />
+		/>
 	</LinearLayout>
 	<Spinner
         android:layout_width="wrap_content"
@@ -129,12 +152,46 @@
         android:id="@+id/country"
         android:entries="@array/countries"
         android:ems="10"
-        
+
         android:hint="Pays"
-         />
-	<Button
+	/>
+	<TextView 
+		android:layout_width="match_parent"
+        android:layout_height="30dp"
+		android:gravity="left|center_vertical"
+		android:text="Contact"
+		android:textColor="@android:color/white"
+		android:paddingLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/border">
+
+	</TextView>
+	<EditText
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="Livraison à une autre adresse ?"
-		 />
+		android:ems="10"
+		android:id="@+id/phone"
+		android:layout_gravity="center_horizontal"
+		android:hint="Téléphone"
+		android:inputType="phone"
+	/>
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:id="@+id/mobile"
+		android:layout_gravity="center_horizontal"
+		android:hint="Mobile"
+		android:inputType="phone"
+	/>
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:id="@+id/email"
+		android:layout_gravity="center_horizontal"
+		android:hint="Email"
+		android:inputType="textEmailAddress"
+	/>
+	
 </LinearLayout>

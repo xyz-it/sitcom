@@ -30,7 +30,7 @@
     <LinearLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
@@ -39,16 +39,17 @@
             android:id="@+id/toolbar"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            
+            android:paddingLeft="10dp"
+			android:gravity="center_horizontal"
             app:showAsAction="ifRoom"
 			app:theme="@style/SitcomToolbar"
             >
 
             </android.support.v7.widget.Toolbar>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:id="@+id/mainFrame" />
 
     </LinearLayout>

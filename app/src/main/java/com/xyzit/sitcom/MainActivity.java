@@ -113,11 +113,11 @@ public class MainActivity extends ActionBarActivity {
         // enable ActionBar app icon to behave as action to toggle nav drawer
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setHomeButtonEnabled(false);
-        getSupportActionBar().setDisplayUseLogoEnabled(false);
+        //getSupportActionBar().setDisplayUseLogoEnabled(false);
         getSupportActionBar().setLogo(R.drawable.ic_logo);
         //getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_logo);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_logo);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getSupportActionBar().setTitle("");
 
@@ -214,8 +214,8 @@ public class MainActivity extends ActionBarActivity {
 		//String text = Integer.toString(position);
 		//Toast.makeText(this, text, Toast.LENGTH_LONG);
 
-        getSupportActionBar().setIcon(mIcons.getDrawable(position));
-        setTitle(mTitles[position]);
+        //getSupportActionBar().setIcon(mIcons.getDrawable(position));
+        //setTitle(mTitles[position]);
 
 
         mDrawerLayout.closeDrawer(mleftMenu);
