@@ -39,8 +39,7 @@
             android:id="@+id/toolbar"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:paddingLeft="10dp"
-			android:gravity="center_horizontal"
+            android:gravity="center_horizontal"
             app:showAsAction="ifRoom"
 			app:theme="@style/SitcomToolbar"
             >

@@ -5,4 +5,34 @@
 	android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Date de livraison"
+        android:id="@+id/textView2"
+        android:gravity="left|center_vertical"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_today_white"
+        android:drawablePadding="2dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/deliveryDate"
+        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+        android:hint="Date de livraison"
+        android:layout_toEndOf="@id/deliveryDate"
+        android:layout_toRightOf="@+id/textView2"
+        android:gravity="left|center_vertical"
+        android:minWidth="200dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appliquer à toute la commande"
+        android:id="@+id/checkBox" />
+
 </LinearLayout>
