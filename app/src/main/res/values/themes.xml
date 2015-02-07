@@ -31,7 +31,8 @@
     </style>
 	
 	<style name="SitcomToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-		<item name="android:background">#404041</item>
+		<!--<item name="android:background">#404041</item>-->
+		<item name="android:background">@drawable/toolbar_gradient</item>
 		<item name="android:textColorPrimary">#fFF</item>
 	</style>
 </resources>
