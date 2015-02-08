@@ -8,7 +8,7 @@
 		android:layout_height="wrap_content"
 		android:layout_width="match_parent"
 		android:minHeight="?attr/actionBarSize"
-		android:background="#525252"
+		android:background="#404041"
 	>
 	<Button
 		android:layout_height="30dp"
@@ -42,16 +42,16 @@
         android:entries="@array/civility"
         android:ems="10"
         android:hint="Civilité"
-	/>
+        android:padding="7dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/forwardingAgent"
         android:hint="Nom"
-	/>
+        android:padding="7dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
         android:hint="Prénom"
 
 
-	/>
+        android:padding="7dp" />
 	<TextView 
 		android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -89,7 +89,7 @@
 			android:layout_gravity="center_horizontal"
 
 			android:hint="N°"
-		/>
+            android:padding="7dp" />
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
 			android:layout_gravity="center_horizontal"
 
 			android:hint="Rue"
-		/>
+            android:padding="7dp" />
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
@@ -112,7 +112,7 @@
 			android:layout_gravity="center_horizontal"
 
 			android:hint="Etage"
-		/>
+            android:padding="7dp" />
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
 			android:layout_gravity="center_horizontal"
 
 			android:hint="Batiment, Immeuble"
-		/>
+            android:padding="7dp" />
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
@@ -135,7 +135,7 @@
 			android:layout_gravity="center_horizontal"
 
 			android:hint="CP"
-		/>
+            android:padding="7dp" />
 		<EditText
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
 			android:layout_gravity="center_horizontal"
 
 			android:hint="Ville"
-		/>
+            android:padding="7dp" />
 	</LinearLayout>
 	<Spinner
         android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
         android:ems="10"
 
         android:hint="Pays"
-	/>
+        android:padding="7dp" />
 	<TextView 
 		android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -175,7 +175,7 @@
 		android:layout_gravity="center_horizontal"
 		android:hint="Téléphone"
 		android:inputType="phone"
-	/>
+        android:padding="7dp" />
 	<EditText
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
 		android:layout_gravity="center_horizontal"
 		android:hint="Mobile"
 		android:inputType="phone"
-	/>
+        android:padding="7dp" />
 	<EditText
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -193,6 +193,6 @@
 		android:layout_gravity="center_horizontal"
 		android:hint="Email"
 		android:inputType="textEmailAddress"
-	/>
+        android:padding="7dp" />
 	
 </LinearLayout>
