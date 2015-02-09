@@ -27,11 +27,12 @@
         android:layout_alignBottom="@+id/deliveryDate"
         android:layout_alignParentStart="true"
         android:paddingRight="10dp"
-        android:gravity="center"
+        android:gravity="left|center"
         android:layout_alignTop="@+id/deliveryDate"
         android:layout_alignBaseline="@+id/deliveryDate"
         android:paddingLeft="10dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/businessContributorLabel" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -69,7 +70,7 @@
         android:layout_below="@+id/deliveryCheckbox"
         android:layout_alignBottom="@+id/forwardingAgent"
         android:gravity="center_vertical"
-        android:layout_alignRight="@+id/deliveryDateLabel"
+        android:layout_alignRight="@+id/businessContributorLabel"
         android:layout_alignParentStart="true"
         android:paddingRight="10dp"
         android:textAlignment="gravity"
@@ -120,7 +121,7 @@
         android:layout_alignBaseline="@+id/workshopDate"
         android:paddingLeft="10dp"
         android:textStyle="bold"
-        android:layout_alignRight="@+id/deliveryDateLabel"
+        android:layout_alignRight="@+id/businessContributorLabel"
         android:layout_alignParentLeft="true"
         android:textAlignment="gravity" />
 
@@ -149,8 +150,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/workshopButton"
         android:background="@drawable/buttonshape"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:drawableRight="@drawable/ic_action_notification_event_available"
         android:textColor="@android:color/white"
         android:textStyle="bold"
@@ -171,7 +172,7 @@
         android:layout_alignBaseline="@+id/renoDate"
         android:paddingLeft="10dp"
         android:textStyle="bold"
-        android:layout_alignRight="@+id/deliveryDateLabel"
+        android:layout_alignRight="@+id/businessContributorLabel"
         android:layout_alignParentLeft="true"
         android:textAlignment="gravity" />
 
@@ -200,8 +201,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/renoButton"
         android:background="@drawable/buttonshape"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:drawableRight="@drawable/ic_action_notification_event_available"
         android:textColor="@android:color/white"
         android:textStyle="bold"
@@ -220,7 +221,7 @@
         android:layout_alignBaseline="@+id/surveyDate"
         android:paddingLeft="10dp"
         android:textStyle="bold"
-        android:layout_alignRight="@+id/deliveryDateLabel"
+        android:layout_alignRight="@+id/businessContributorLabel"
         android:layout_alignParentLeft="true"
         android:textAlignment="gravity" />
 
@@ -249,8 +250,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/surveyButton"
         android:background="@drawable/buttonshape"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:drawableRight="@drawable/ic_action_notification_event_available"
         android:textColor="@android:color/white"
         android:textStyle="bold"
@@ -269,7 +270,7 @@
         android:layout_alignBaseline="@+id/installationDate"
         android:paddingLeft="10dp"
         android:textStyle="bold"
-        android:layout_alignRight="@+id/deliveryDateLabel"
+        android:layout_alignRight="@+id/businessContributorLabel"
         android:layout_alignParentLeft="true"
         android:textAlignment="gravity" />
 
@@ -298,12 +299,154 @@
         android:layout_height="wrap_content"
         android:id="@+id/installationButton"
         android:background="@drawable/buttonshape"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:drawableRight="@drawable/ic_action_notification_event_available"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:layout_alignBaseline="@+id/installationDate"
         android:layout_toRightOf="@+id/installationDate" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetDateButton"
+        android:background="@drawable/buttonshape"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:drawableRight="@drawable/ic_action_navigation_refresh"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/installationDate"
+        android:layout_alignParentStart="false"
+        android:text="Réinitialiser toutes les dates"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Autres"
+        android:id="@+id/otherSectionLabel"
+        android:gravity="left|center_vertical"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_action_maps_layers"
+        android:drawablePadding="2dp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/resetDateButton"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Apporteur d&apos;affaire"
+        android:id="@+id/businessContributorLabel"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:layout_alignBaseline="@+id/businessContributor" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/businessContributor"
+        android:hint="Apporteur d&apos;affaire"
+        android:layout_below="@+id/otherSectionLabel"
+        android:layout_toRightOf="@+id/forwardingAgentLabel"
+        android:layout_margin="5dp"
+        android:maxLength="10" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commande en réservation"
+        android:id="@+id/bookCheckbox"
+        android:layout_below="@+id/businessContributor"
+        android:layout_alignStart="@+id/resetDateButton"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bloquer approvisionnement"
+        android:id="@+id/blockCheckBox"
+        android:layout_below="@+id/bookCheckbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Textes"
+        android:id="@+id/textSectionLabel"
+        android:gravity="left|center_vertical"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_action_notification_sms"
+        android:drawablePadding="2dp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/blockCheckBox"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Informations sur la livraison"
+        android:id="@+id/deliveryTextLabel"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/textSectionLabel" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/deliveryText"
+        android:layout_below="@+id/deliveryTextLabel"
+        android:minLines="3"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Commentaires"
+        android:id="@+id/commentsLabel"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/deliveryText"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/comments"
+        android:layout_below="@+id/commentsLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minLines="3" />
 
 </RelativeLayout>

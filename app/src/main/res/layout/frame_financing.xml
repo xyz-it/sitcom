@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/financingType"
+        android:entries="@array/civility"
+        android:ems="10"
+        android:hint="Civilité"
+        android:padding="7dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N° Autorisation Projeo"
+        android:id="@+id/creditNumberLabel"
+        android:layout_below="@+id/financingType"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:labelFor="@id/creditNumber"
+        android:layout_alignBaseline="@+id/creditNumber" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/creditNumber"
+        android:hint="Autorisation Projeo"
+        android:layout_below="@+id/financingType"
+        android:layout_margin="5dp"
+        android:maxLength="10"
+        android:layout_toRightOf="@+id/creditNumberLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Montant financé"
+        android:id="@+id/creditAmountLabel"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:labelFor="@id/creditNumber"
+        android:layout_alignBaseline="@+id/creditAmount"
+        android:layout_alignRight="@+id/creditNumberLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/creditAmount"
+        android:hint="Autorisation Projeo"
+        android:layout_below="@+id/creditNumber"
+        android:layout_margin="5dp"
+        android:maxLength="10"
+        android:layout_toRightOf="@+id/creditNumberLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Date de naissance"
+        android:id="@+id/birthdateLAbel"
+        android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:gravity="left|center"
+        android:layout_alignBaseline="@+id/birthdate"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:textAlignment="gravity"
+        android:layout_alignRight="@+id/creditNumberLabel" />
+
+    <EditText
+        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/birthdate"
+        android:hint="Date de naissance"
+        android:layout_toEndOf="@id/deliveryDate"
+        android:gravity="left|center_vertical"
+        android:textColor="@android:color/white"
+        android:paddingStart="10dp"
+        android:drawableStart="@drawable/ic_today"
+        android:drawableLeft="@drawable/ic_today"
+        android:layout_below="@+id/creditAmount"
+        android:layout_margin="5dp"
+        android:maxLength="10"
+        android:layout_toRightOf="@+id/birthdateLAbel" />
+
+</RelativeLayout>
