@@ -27,7 +27,6 @@
         android:textAlignment="gravity"
         android:textStyle="bold"
         android:paddingLeft="10dp"
-        android:labelFor="@id/creditNumber"
         android:layout_alignBaseline="@+id/creditNumber" />
 
     <EditText
@@ -64,7 +63,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/creditAmount"
-        android:hint="Autorisation Projeo"
+        android:hint="Montant"
         android:layout_below="@+id/creditNumber"
         android:layout_margin="5dp"
         android:maxLength="10"
@@ -93,11 +92,8 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/birthdate"
-        android:hint="Date de naissance"
-        android:layout_toEndOf="@id/deliveryDate"
         android:gravity="left|center_vertical"
         android:textColor="@android:color/white"
-        android:paddingStart="10dp"
         android:drawableStart="@drawable/ic_today"
         android:drawableLeft="@drawable/ic_today"
         android:layout_below="@+id/creditAmount"
