@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="financing_type">
+        <item>3 fois sans frais</item>
+        <item>10 fois sans frais</item>
+        <item>Crédit 12 mois</item>
+        <item>Crédit 24 mois</item>
+        
+    </string-array>
+</resources>

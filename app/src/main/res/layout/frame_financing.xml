@@ -3,16 +3,31 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
 >
-
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Type de financement"
+        android:id="@+id/financingTypeLabel"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:layout_alignBaseline="@+id/financingType"
+		android:layout_alignRight="@+id/creditNumberLabel"/>
+	
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/financingType"
-        android:entries="@array/civility"
+        android:entries="@array/financing_type"
         android:ems="10"
         android:hint="Civilité"
         android:padding="7dp"
-        android:layout_alignParentStart="true" />
+		android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/financingTypeLabel" />
 
     <TextView
         android:layout_width="wrap_content"
