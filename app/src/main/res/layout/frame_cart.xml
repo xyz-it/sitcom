@@ -8,9 +8,28 @@
 		android:layout_height="wrap_content"
 		android:layout_width="match_parent"
 		android:gravity="center_horizontal"
+		android:background="#404041"
 		app:showAsAction="ifRoom"
-		app:theme="@style/SitcomToolbar"
+		android:paddingLeft="20dp"
 	>
+		<EditText
+			style="@android:style/Widget.DeviceDefault.Light.Spinner"
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent"
+			
+			android:ems="10"
+			android:id="@+id/materialSearch"
+			android:hint="Article"
+			android:gravity="left|center_vertical"
+			android:textColor="@android:color/white"
+			
+			android:background="@drawable/material_search_field"
+			android:drawableLeft="@drawable/ic_today"
+			
+			
+			
+			 />
+		
 	</android.support.v7.widget.Toolbar>
     
 </LinearLayout>
