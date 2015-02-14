@@ -14,9 +14,9 @@
 	>
 		<EditText
 			style="@android:style/Widget.DeviceDefault.Light.Spinner"
-			android:layout_width="fill_parent"
+			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			
+			android:layout_marginRight="40dp"
 			android:ems="10"
 			android:id="@+id/materialSearch"
 			android:hint="Article"
@@ -24,10 +24,21 @@
 			android:textColor="@android:color/white"
 			
 			android:background="@drawable/material_search_field"
-			android:drawableLeft="@drawable/ic_today"
+			android:drawableLeft="@drawable/ic_add"
 			
 			
 			
+			 />
+		<Button
+			style="?android:attr/buttonStyleSmall"
+			android:layout_width="40dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:layout_marginRight="20dp"
+			android:id="@+id/buttonScan"
+			android:background="@drawable/buttonshape"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
 			 />
 		
 	</android.support.v7.widget.Toolbar>
