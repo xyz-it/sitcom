@@ -22,6 +22,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.xyzit.sitcom.controller.adapter.LeftMenuAdapter;
+import com.xyzit.sitcom.view.fragment.MainFragment;
+
 //import android.widget.*;
 
 /**

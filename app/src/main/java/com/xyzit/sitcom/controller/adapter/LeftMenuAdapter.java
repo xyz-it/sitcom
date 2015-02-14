@@ -1,4 +1,4 @@
-package com.xyzit.sitcom;
+package com.xyzit.sitcom.controller.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.xyzit.sitcom.R;
 
 public class LeftMenuAdapter extends ArrayAdapter<String> {
 	private final Context context;

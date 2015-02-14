@@ -1,4 +1,4 @@
-package com.xyzit.sitcom;
+package com.xyzit.sitcom.view.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
