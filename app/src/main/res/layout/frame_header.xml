@@ -233,7 +233,7 @@
         android:ems="10"
         android:id="@+id/surveyDate"
         android:hint="Métré"
-        android:layout_toEndOf="@id/deliveryDate"
+        
         android:gravity="left|center_vertical"
         android:textColor="@android:color/white"
         android:paddingStart="10dp"
@@ -256,7 +256,7 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:layout_alignBaseline="@+id/surveyDate"
-        android:layout_toRightOf="@+id/renoDate" />
+        android:layout_toRightOf="@+id/surveyDate" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -267,11 +267,12 @@
         android:layout_alignParentStart="true"
         android:paddingRight="10dp"
         android:gravity="left|center"
-        android:layout_alignBaseline="@+id/installationDate"
         android:paddingLeft="10dp"
         android:textStyle="bold"
+		android:layout_alignBaseline="@+id/installationButton"
         android:layout_alignRight="@+id/businessContributorLabel"
         android:layout_alignParentLeft="true"
+		android:layout_below="@+id/surveyLabel"
         android:textAlignment="gravity" />
 
     <EditText
@@ -288,10 +289,11 @@
         android:paddingStart="10dp"
         android:drawableStart="@drawable/ic_today"
         android:drawableLeft="@drawable/ic_today"
-        android:layout_below="@+id/surveyDate"
+		android:layout_alignBaseline="@+id/installationButton"
+        
         android:layout_margin="5dp"
         android:maxLength="10"
-        android:layout_toRightOf="@+id/installationLabel" />
+        android:layout_toLeftOf="@+id/installationButton" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -304,8 +306,8 @@
         android:drawableRight="@drawable/ic_action_notification_event_available"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        android:layout_alignBaseline="@+id/installationDate"
-        android:layout_toRightOf="@+id/installationDate" />
+		android:layout_below="@+id/surveyButton"
+         />
 
     <Button
         style="?android:attr/buttonStyleSmall"
