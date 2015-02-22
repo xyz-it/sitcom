@@ -1,24 +1,37 @@
 package com.xyzit.sitcom.view.fragment;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.xyzit.sitcom.model.DummySampleModel;
+
+import org.robobinding.ViewBinder;
+
 /**
  * Created by kimveasna on 01/02/2015.
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends AbstractFragment {
 
     public static final String ARG_FRAGMENT_ID = "fragment_id";
 
+    private DummySampleModel model;
 
     //private static String[] mFrames;
 
     public MainFragment() {
         // Empty constructor required for fragment subclasses
         //mFrames = this.getActivity().getResources().getStringArray(R.array.frames);
+    }
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        model = new DummySampleModel();
+
     }
 
     @Override
@@ -28,9 +41,10 @@ public class MainFragment extends Fragment {
         int frameId = getArguments().getInt(ARG_FRAGMENT_ID);
 
 
-        View rootView = inflater.inflate(frameId, container, false);
+        //View rootView = inflater.inflate(frameId, container, false);
 
-
+        ViewBinder viewBinder = createViewBinder();
+        View rootView = viewBinder.inflateAndBindWithoutAttachingToRoot(frameId, model, container);
 
         return rootView;
     }

@@ -25,6 +25,10 @@ import android.widget.Toast;
 import com.xyzit.sitcom.controller.adapter.LeftMenuAdapter;
 import com.xyzit.sitcom.view.fragment.MainFragment;
 
+import org.robobinding.ViewBinder;
+import org.robobinding.binder.BinderFactory;
+import org.robobinding.binder.BinderFactoryBuilder;
+
 //import android.widget.*;
 
 /**
@@ -72,11 +76,20 @@ public class MainActivity extends ActionBarActivity {
     private TypedArray mIcons;
     private View mainFrame;
 
+    private BinderFactory reusableBinderFactory;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //requestWindowFeature(Window.FE
+
+
         setContentView(R.layout.activity_main);
+
+
+        reusableBinderFactory = new BinderFactoryBuilder().build();
+
 
         mTitle = mDrawerTitle = getTitle();
         mLeftMenuItems = getResources().obtainTypedArray(R.array.menu_items);
@@ -265,6 +278,24 @@ public class MainActivity extends ActionBarActivity {
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+
+    public BinderFactory getReusableBinderFactory() {
+        return reusableBinderFactory;
+    }
+
+
+    private ViewBinder createViewBinder() {
+        BinderFactory binderFactory = getReusableBinderFactory();
+        return binderFactory.createViewBinder(this);
+    }
+
+
+    public void initializeContentView(int layoutId, Object presentationModel) {
+        ViewBinder viewBinder = createViewBinder();
+        View rootView = viewBinder.inflateAndBind(layoutId, presentationModel);
+        setContentView(rootView);
     }
 
     /**

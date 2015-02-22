@@ -1,5 +1,24 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven() {
+            name 'RoboBinding AspectJPlugin Maven Repository'
+            url "https://github.com/RoboBinding/RoboBinding-aspectj-plugin/raw/master/mavenRepo"
+            //url "file://D:/git/RoboBinding-aspectj-plugin/mavenRepo"
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.1'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.+'
+        classpath 'org.robobinding:aspectj-plugin:0.8.+'
+    }
+}
+
+
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'org.robobinding.android-aspectj'
 
 android {
     compileSdkVersion 21
@@ -20,9 +39,28 @@ android {
     }
 }
 
+
+repositories {
+    mavenCentral()
+    maven() {
+        name 'SonaType snapshot repository'
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+    /*
+    maven() {
+        name 'RoboBinding Framework Maven Repository'
+        url "file://D:/git/RoboBinding/framework/mavenRepo"
+    }
+    maven() {
+        name 'RoboBinding CodeGen Maven Repository'
+        url "file://D:/git/RoboBinding/codegen/mavenRepo"
+    }*/
+}
+
+
 ext {
-//robobindingVersion = 'latest.integration'
-    robobindingVersion = '0.8.9'
+robobindingVersion = 'latest.integration'
+    //robobindingVersion = '0.8.9'
 }
 
 dependencies {
@@ -30,8 +68,14 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //compile"org.robobinding:robobinding:${robobindingVersion}"
-    compile("org.robobinding:robobinding:${robobindingVersion}:with-dependencies") {
+    compile("org.robobinding:robobinding:${robobindingVersion}:with-aop") {
         exclude group: 'com.google.guava', module: 'guava'
     }
+    compile 'com.google.guava:guava:16.0'
+
+
+    aspectPath "org.robobinding:robobinding:${robobindingVersion}:with-aop"
+
+    apt "org.robobinding:codegen:$robobindingVersion"
 
 }
