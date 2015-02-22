@@ -90,7 +90,7 @@
         android:layout_toRightOf="@+id/forwardingAgentLabel"
         android:layout_margin="5dp"
         android:maxLength="10"
-        bind:text="${test}"/>
+        bind:text="${test}"/> 
 
     <TextView
         android:layout_width="match_parent"
