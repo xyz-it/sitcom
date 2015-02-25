@@ -252,14 +252,10 @@
         android:drawableRight="@drawable/ic_action_notification_event_available"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-<<<<<<< HEAD
-        android:layout_alignBaseline="@+id/surveyDate"
-        android:layout_toRightOf="@+id/surveyDate" />
-=======
         android:layout_toRightOf="@+id/renoDate"
         android:layout_below="@+id/renoButton"
         android:layout_margin="2dp" />
->>>>>>> branch 'master' of https://github.com/xyz-it/sitcom.git
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -270,18 +266,10 @@
         android:layout_alignParentStart="true"
         android:paddingRight="10dp"
         android:gravity="left|center"
-<<<<<<< HEAD
-=======
-        android:layout_alignBaseline="@+id/installationButton"
->>>>>>> branch 'master' of https://github.com/xyz-it/sitcom.git
         android:paddingLeft="10dp"
         android:textStyle="bold"
-<<<<<<< HEAD
-		android:layout_alignBaseline="@+id/installationButton"
-        android:layout_alignRight="@+id/businessContributorLabel"
-=======
+
         android:layout_alignRight="@+id/workshopLabel"
->>>>>>> branch 'master' of https://github.com/xyz-it/sitcom.git
         android:layout_alignParentLeft="true"
 		android:layout_below="@+id/surveyLabel"
         android:textAlignment="gravity" />
@@ -299,19 +287,10 @@
         android:textColor="@android:color/white"
         android:drawableStart="@drawable/ic_today"
         android:drawableLeft="@drawable/ic_today"
-<<<<<<< HEAD
-		android:layout_alignBaseline="@+id/installationButton"
-        
-=======
->>>>>>> branch 'master' of https://github.com/xyz-it/sitcom.git
         android:layout_margin="5dp"
         android:maxLength="10"
-<<<<<<< HEAD
-        android:layout_toLeftOf="@+id/installationButton" />
-=======
         android:layout_toRightOf="@+id/installationLabel"
         android:layout_alignBaseline="@+id/installationButton" />
->>>>>>> branch 'master' of https://github.com/xyz-it/sitcom.git
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -324,14 +303,9 @@
         android:drawableRight="@drawable/ic_action_notification_event_available"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-<<<<<<< HEAD
-		android:layout_below="@+id/surveyButton"
-         />
-=======
         android:layout_toRightOf="@+id/installationDate"
         android:layout_below="@+id/surveyButton"
         android:layout_margin="2dp" />
->>>>>>> branch 'master' of https://github.com/xyz-it/sitcom.git
 
     <Button
         style="?android:attr/buttonStyleSmall"
