@@ -271,8 +271,8 @@
 
         android:layout_alignRight="@+id/workshopLabel"
         android:layout_alignParentLeft="true"
-		android:layout_below="@+id/surveyLabel"
-        android:textAlignment="gravity" />
+        android:textAlignment="gravity"
+        android:layout_alignBaseline="@+id/installationButton" />
 
     <EditText
         style="@android:style/Widget.DeviceDefault.Light.Spinner"
