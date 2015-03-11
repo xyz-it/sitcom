@@ -113,7 +113,7 @@ public class SimpleWebserviceConsumer {
          * the service is located
          */
         //HttpTransportSE httpTransport = new HttpTransportSE(wsURL);
-        HttpsTransportSE httpTransport = new HttpsTransportSE(wsURL);
+        HttpsTransportSE httpTransport = new HttpsTransportSE("", 0, "", 0);
         httpTransport.debug = true;
         try {
             httpTransport.call(wsEndPoint, envelope);

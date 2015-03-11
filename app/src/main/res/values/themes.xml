@@ -3,7 +3,7 @@
     <style name="AppTheme" parent="AppTheme.Base"/>
     <!--<style name="AppTheme.Base" parent="Theme.AppCompat">-->
 	<style name="AppTheme.Base" parent="Theme.AppCompat.Light">
-	
+
         <item name="colorPrimary">@android:color/white</item>
         <item name="colorPrimaryDark">@android:color/white</item>
         <item name="android:windowNoTitle">true</item>
@@ -12,6 +12,8 @@
 		<item name="android:editTextStyle">@style/EditTextSitcomTheme</item>
 		<item name="android:spinnerStyle">@style/SpinnerSitcomTheme</item>
 		<item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemSitcomTheme</item>
+
+
         <!--<item name="android:spinnerItemStyle">@style/SitcomSpinnerItemStyle</item>-->
     </style>
 

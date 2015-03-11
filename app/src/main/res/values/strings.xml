@@ -32,4 +32,6 @@
     <string name="app_not_available">Sorry, there\'s no web browser available</string>
     <string name="menu_customer">Client</string>
     <string name="menu_header">Général</string>
+    <string name="action_settings">Préférences</string>
+    <string name="api_url">http://www</string>
 </resources>

@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.xyzit.sitcom.controller.adapter.LeftMenuAdapter;
 import com.xyzit.sitcom.view.fragment.MainFragment;
+import com.xyzit.sitcom.view.fragment.SettingsFragment;
 
 import org.robobinding.ViewBinder;
 import org.robobinding.binder.BinderFactory;
@@ -207,6 +208,11 @@ public class MainActivity extends ActionBarActivity {
                     Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
                 }
                 return true;
+
+            case R.id.action_settings:
+                displaySettings();
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -255,6 +261,15 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+
+    private void displaySettings() {
+
+        SettingsFragment fragment = new SettingsFragment();
+
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.mainFrame, fragment).commit();
+
+    }
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;

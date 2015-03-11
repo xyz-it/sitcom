@@ -1,8 +1,11 @@
 package com.xyzit.sitcom.com.xyzit.sitcom.provider;
-import android.content.*;
-import com.xyzit.sitcom.model.*;
-import java.util.*;
-import com.xyzit.sitcom.com.xyzit.sitcom.util.http.*;
+import android.content.AsyncTaskLoader;
+import android.content.Context;
+
+import com.xyzit.sitcom.model.VModelSalesOrder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SalesOrderLoader extends AsyncTaskLoader<List<VModelSalesOrder>>
 {
@@ -20,9 +23,9 @@ public class SalesOrderLoader extends AsyncTaskLoader<List<VModelSalesOrder>>
 		List<VModelSalesOrder> data = new ArrayList<VModelSalesOrder>();
 		
 		//Call webservice
-		SimpleWebserviceCursor c = new SimpleWebserviceCursor(uri,columns);
-        c.setNotificationUri(getContext().getContentResolver(), uri);
-        callWebservice(selection, c);
+		//SimpleWebserviceCursor c = new SimpleWebserviceCursor(uri,columns);
+        //c.setNotificationUri(getContext().getContentResolver(), uri);
+        //callWebservice(selection, c);
 		
 		return data;
 	}

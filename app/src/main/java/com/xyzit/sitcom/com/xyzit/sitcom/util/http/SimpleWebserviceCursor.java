@@ -25,6 +25,13 @@ public class SimpleWebserviceCursor extends MatrixCursor implements IWebserviceR
         // TODO Auto-generated constructor stub
     }
 
+
+    public SimpleWebserviceCursor(String wsURL, String wsEndPoint,
+                                  String wsMethod, String[] columnNames) {
+        super(columnNames);
+
+    }
+
     @Override
     public void onWebserviceResponse(Object response) {
         // TODO Auto-generated method stub

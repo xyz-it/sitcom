@@ -20,7 +20,11 @@
         android:icon="@drawable/ic_add_shopping_cart"
         app:showAsAction="ifRoom" />
     <item android:id="@+id/action_websearch"
-          android:icon="@drawable/action_search"
-          android:title="@string/action_websearch"
-          app:showAsAction="ifRoom" />
+        android:icon="@drawable/action_search"
+        android:title="@string/action_websearch"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_white"
+        android:title="@string/action_settings"
+        app:showAsAction="ifRoom" />
 </menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="main_settings"
+    android:title="Wifi connection">
+    <PreferenceCategory
+        android:key="account_settings"
+        android:title="Account">
+        <EditTextPreference
+            android:key="username"
+            android:title="Utilisateur" />
+        <EditTextPreference
+            android:key="password"
+            android:title="Mot de passe" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Service commande">
+        <EditTextPreference
+            android:defaultValue="@string/api_url"
+            android:dialogTitle="URL Service"
+            android:key="url"
+            android:summary="URL"
+            android:title="URL" />
+        <EditTextPreference android:key="port" android:title="Port" android:dialogTitle="Port" />
+        <EditTextPreference android:key="path" android:title="Path" android:dialogTitle="Path" />
+        <EditTextPreference android:key="method" android:title="Method" android:dialogTitle="Fieldname for user" /><EditTextPreference android:key="firstnameField" android:dialogTitle="Fieldname for firstname" android:title="Fieldname for firstname"/>
+        <EditTextPreference android:key="lastnameField" android:title="Fieldname for lastname" android:dialogTitle="Fieldname for lastname"/>
+        <EditTextPreference android:key="acceptField" android:title='Fieldname for "Accept"' android:dialogTitle='Fieldname for "Accept"'/>
+        <EditTextPreference android:key="acceptValue" android:title='Value for "Accept"' android:dialogTitle='Value for "Accept"' /><EditTextPreference android:key="passwordField" android:title="Fieldname for password" android:dialogTitle="Fieldname for password"/>
+        
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

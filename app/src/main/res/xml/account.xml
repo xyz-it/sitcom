@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="main_settings"
+    android:title="Wifi connection">
+    <PreferenceScreen
+        android:icon="@drawable/ic_action_social_person"
+        android:summary="Set your firstname and lastname"
+        android:title="Your ID">
+        <EditTextPreference
+            android:key="firstname"
+            android:summary="Firstname used for registration"
+            android:title="Firstname" />
+        <EditTextPreference
+            android:key="lastname"
+            android:summary="Lastname used for registration"
+            android:title="Lastname" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_action_social_person"
+        android:summary="Cell phone which will connect to Wifi"
+        android:title="Your phone">
+        <EditTextPreference
+            android:dialogTitle="Prefix"
+            android:key="prefix"
+            android:summary="Country prefix (33 for France)"
+            android:title="Prefix" />
+        <EditTextPreference
+            android:dialogTitle="Phone number"
+            android:key="requestor_phone"
+            android:summary="Your phone number (without country prefix)"
+            android:title="Phone number" />
+    </PreferenceScreen>
+
+
+</PreferenceScreen>
