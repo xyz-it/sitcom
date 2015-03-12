@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Vector;
+import android.content.*;
+import android.preference.*;
 
 public class SalesOrderProvider extends ContentProvider implements IWebserviceResponseHandler
 {
@@ -156,6 +158,11 @@ public class SalesOrderProvider extends ContentProvider implements IWebserviceRe
 
     private void callWebservice(String selection, IWebserviceResponseHandler handler)
     {
+		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+		wsURL = sharedPref.getString("url", "");
+		wsEndPoint = sharedPref.getString("endpoint", "");
+		wsPort = sharedPref.getInt("port", 8080);
+		
         consumer = new SimpleWebserviceConsumer(wsURL, wsEndPoint, wsMethod);
         consumer.addResponseHandler(handler);
 
