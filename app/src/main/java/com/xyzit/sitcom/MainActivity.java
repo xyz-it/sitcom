@@ -1,10 +1,9 @@
 package com.xyzit.sitcom;
 
 
+import android.animation.LayoutTransition;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.SearchManager;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -12,6 +11,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -162,7 +162,7 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         //mDrawerToggle.setDrawerIndicatorEnabled(false);
         //mDrawerToggle.setHomeAsUpIndicator(R.drawable.ic_logo);
-	
+
 
         if (savedInstanceState == null) {
             selectItem(0);
@@ -175,6 +175,17 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
+
+        SearchView searchView = (SearchView) (menu.findItem(R.id.action_websearch).getActionView());
+        int searchBarId = searchView.getContext().getResources().getIdentifier("app:id/search_bar", null, null);
+
+        LinearLayout testlayout = (LinearLayout) searchView.getChildAt(0);
+        int searchBarId2 = searchView.getResources().getIdentifier("app:id/search_bar", null, null);
+        LinearLayout searchBar = (LinearLayout) searchView.findViewById(searchBarId2);
+
+        //searchBar.setLayoutTransition(new LayoutTransition());
+        testlayout.setLayoutTransition(new LayoutTransition());
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -198,6 +209,8 @@ public class MainActivity extends ActionBarActivity {
         // Handle action buttons
         switch (item.getItemId()) {
             case R.id.action_websearch:
+
+                /*
                 // create intent to perform web search for this planet
                 Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
                 intent.putExtra(SearchManager.QUERY, getSupportActionBar().getTitle());
@@ -207,7 +220,8 @@ public class MainActivity extends ActionBarActivity {
                 } else {
                     Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
                 }
-                return true;
+                return true;*/
+                return super.onOptionsItemSelected(item);
 
             case R.id.action_settings:
                 displaySettings();
