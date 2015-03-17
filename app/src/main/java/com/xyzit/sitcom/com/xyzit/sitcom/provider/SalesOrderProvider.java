@@ -25,18 +25,25 @@ import java.util.Vector;
 import android.content.*;
 import android.preference.*;
 
+
 public class SalesOrderProvider extends ContentProvider implements IWebserviceResponseHandler
 {
-
-	public static final String AUTHORITY = "com.lapeyre.sales.salesorderprovider";
+	//URLs de base pour interrogation
+	public static final String AUTHORITY = "com.lapeyre.sales";
     public static final String PATH = "salesorder";
+	
+	//Identifiant pour les types d'URL
     private static final int SALESORDER = 1;
     private static final int SALESORDER_ID = 2;
 
+	
+	//A definir, tous les champs retournes par le service
     public static final String _ID = "Vbeln";
     public static final String SALESORDER_IDENTIFIER = "Vbeln";
     public static final String CUSTOMER = "Kunnr";
     
+	
+	//Facilitateur pour acceder a tous les champs
     private static final String[] allFields =
 	{SalesOrderProvider._ID,
 		SalesOrderProvider.SALESORDER_IDENTIFIER,
@@ -46,6 +53,8 @@ public class SalesOrderProvider extends ContentProvider implements IWebserviceRe
 
     private String[] columnNames;
 
+	
+	//URI pour matcher les requetes
     public static final Uri CONTENT_URI =
 	Uri.parse("content://" + AUTHORITY + "/" + PATH);
 	
@@ -55,6 +64,8 @@ public class SalesOrderProvider extends ContentProvider implements IWebserviceRe
 
     private Uri contentUri;
 
+	
+	//Pointer vers le cursor en cours (unique ??)
     SimpleWebserviceCursor currentCursor;
 
 
@@ -162,6 +173,8 @@ public class SalesOrderProvider extends ContentProvider implements IWebserviceRe
 		wsURL = sharedPref.getString("url", "");
 		wsEndPoint = sharedPref.getString("endpoint", "");
 		wsPort = sharedPref.getInt("port", 8080);
+		wsMethod = sharedPref.getString("get_details", "");
+		
 		
         consumer = new SimpleWebserviceConsumer(wsURL, wsEndPoint, wsMethod);
         consumer.addResponseHandler(handler);
