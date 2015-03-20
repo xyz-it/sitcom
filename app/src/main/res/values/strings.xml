@@ -23,8 +23,6 @@
         <item>Financement</item>
         <item>Livraison</item>
         <item>Installation</item>
-        
-        
     </string-array>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>

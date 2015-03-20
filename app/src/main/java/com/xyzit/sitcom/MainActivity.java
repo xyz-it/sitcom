@@ -4,8 +4,10 @@ package com.xyzit.sitcom;
 import android.animation.LayoutTransition;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -22,6 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.xyzit.sitcom.com.xyzit.sitcom.provider.SalesOrderProvider;
 import com.xyzit.sitcom.controller.adapter.LeftMenuAdapter;
 import com.xyzit.sitcom.view.fragment.MainFragment;
 import com.xyzit.sitcom.view.fragment.SettingsFragment;
@@ -79,6 +82,7 @@ public class MainActivity extends ActionBarActivity {
 
     private BinderFactory reusableBinderFactory;
 
+    private static int barcodeRequestCode = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -223,6 +227,13 @@ public class MainActivity extends ActionBarActivity {
                 return true;*/
                 return super.onOptionsItemSelected(item);
 
+            case R.id.action_barcode:
+
+                Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+                startActivityForResult(intent, barcodeRequestCode);
+                return true;
+
+
             case R.id.action_settings:
                 displaySettings();
                 return true;
@@ -231,6 +242,39 @@ public class MainActivity extends ActionBarActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        // TODO Auto-generated method stub
+        if (requestCode == barcodeRequestCode) {
+            if (resultCode == RESULT_OK) {
+                String articleId = intent.getStringExtra("SCAN_RESULT");
+                Intent articleIntent = new Intent(Intent.ACTION_VIEW);
+                articleIntent.setData(Uri.withAppendedPath(SalesOrderProvider.CONTENT_URI, articleId));
+                this.startActivity(articleIntent);
+            }
+        }
+        //super.onActivityResult(requestCode, resultCode, data);
+    }
+
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        // TODO Auto-generated method stub
+        super.onNewIntent(intent);
+        if (Intent.ACTION_VIEW.equals(intent.getAction()))
+            //displayCustomer(intent);
+        {
+            Toast toast = Toast.makeText(this, intent.getDataString(), Toast.LENGTH_LONG);
+            toast.show();
+        }
+
+       // else
+            //displayEmpty();
+        //setContentView(R.layout.empty);
+    }
+
 
     private void selectItem(int position) {
         // update the main content by replacing fragments

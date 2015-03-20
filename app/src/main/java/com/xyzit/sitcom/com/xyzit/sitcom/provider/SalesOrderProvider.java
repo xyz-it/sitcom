@@ -1,10 +1,12 @@
 package com.xyzit.sitcom.com.xyzit.sitcom.provider;
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.SharedPreferences;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.xyzit.sitcom.com.xyzit.sitcom.util.http.CustomerProvider;
@@ -22,8 +24,6 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Vector;
-import android.content.*;
-import android.preference.*;
 
 
 public class SalesOrderProvider extends ContentProvider implements IWebserviceResponseHandler
@@ -32,7 +32,7 @@ public class SalesOrderProvider extends ContentProvider implements IWebserviceRe
 	public static final String AUTHORITY = "com.lapeyre.sales";
     public static final String PATH = "salesorder";
 	
-	//Identifiant pour les types d'URL
+	//Identifiant pour les types d"URL
     private static final int SALESORDER = 1;
     private static final int SALESORDER_ID = 2;
 
@@ -41,14 +41,108 @@ public class SalesOrderProvider extends ContentProvider implements IWebserviceRe
     public static final String _ID = "Vbeln";
     public static final String SALESORDER_IDENTIFIER = "Vbeln";
     public static final String CUSTOMER = "Kunnr";
-    
+    public static final String EXPECTED_PLANT = "ExpectedPlant";
+    public static final String STORE = "Werks";
+    public static final String REMINDERSTATUS = "ReminderStatus";
+    public static final String HEADERSTATUS = "HeaderStatus";
+    public static final String IHREZ = "Ihrez";
+    public static final String REQDELIVDATE = "ReqDelivDate";
+    public static final String APPLYDELIVDATE = "ApplyDelivDate";
+    public static final String BUSINESSCONTRIBUTOR = "BusinessContributor";
+    public static final String INCO2 = "Inco2";
+    public static final String WORKSITESTART = "WorksiteStart";
+    public static final String WORKSITEDURATION = "WorksiteDuration";
+    public static final String SURVEYDATE = "SurveyDate";
+    public static final String INSTALLDATE = "InstallDate";
+    public static final String HEADERTEXT1 = "HeaderText1";
+    public static final String HEADERTEXT2 = "HeaderText2";
+    public static final String COUPON = "Coupon";
+    public static final String WORKSHOPCONTROL = "WorkshopControl";
+    public static final String IHREZE = "IhrezE";
+    public static final String BSTKD = "Bstkd";
+    public static final String WORKSITEEND = "WorksiteEnd";
+    public static final String KDKG2 = "Kdkg2";
+    public static final String DATERAZ = "Dateraz";
+    public static final String ZTERM = "Zterm";
+    public static final String REDUCEDTAX = "ReducedTax";
+    public static final String BSARK = "Bsark";
+    public static final String FITTER = "Fitter";
+    public static final String BOOK = "Book";
+    public static final String BLOCK = "Block";
+    public static final String MEASURER = "Measurer";
+    public static final String SURVEYTIME = "SurveyTime";
+    public static final String WORKSITEINDIC = "WorksiteIndic";
+    public static final String VBELV = "Vbelv";
+    public static final String AUART = "Auart";
+    public static final String KUNNR = "Kunnr";
+    public static final String KDGRP = "Kdgrp";
+    public static final String VKORG = "Vkorg";
+    public static final String BUKRS = "Bukrs";
+    public static final String VTWEG = "Vtweg";
+    public static final String SPART = "Spart";
+    public static final String VKBUR = "Vkbur";
+    public static final String ERDAT = "Erdat";
+    public static final String AEDAT = "Aedat";
+    public static final String DELIVERYDATE = "DeliveryDate";
+    public static final String NETWR = "Netwr";
+    public static final String GROSSAMOUNT = "Grossamount";
+    public static final String WAERK = "Waerk";
+    public static final String TOTALDISCOUNT = "TotalDiscount";
+    public static final String CREDITDELETED = "CreditDeleted";
 	
 	//Facilitateur pour acceder a tous les champs
     private static final String[] allFields =
 	{SalesOrderProvider._ID,
 		SalesOrderProvider.SALESORDER_IDENTIFIER,
-		SalesOrderProvider.CUSTOMER
-		
+		SalesOrderProvider.CUSTOMER,
+            SalesOrderProvider.EXPECTED_PLANT,
+            SalesOrderProvider.STORE,
+            SalesOrderProvider.REMINDERSTATUS,
+            SalesOrderProvider.HEADERSTATUS,
+            SalesOrderProvider.IHREZ,
+            SalesOrderProvider.REQDELIVDATE,
+            SalesOrderProvider.APPLYDELIVDATE,
+            SalesOrderProvider.BUSINESSCONTRIBUTOR,
+            SalesOrderProvider.INCO2,
+            SalesOrderProvider.WORKSITESTART,
+            SalesOrderProvider.WORKSITEDURATION,
+            SalesOrderProvider.SURVEYDATE,
+            SalesOrderProvider.INSTALLDATE,
+            SalesOrderProvider.HEADERTEXT1,
+            SalesOrderProvider.HEADERTEXT2,
+            SalesOrderProvider.COUPON,
+            SalesOrderProvider.WORKSHOPCONTROL,
+            SalesOrderProvider.IHREZE,
+            SalesOrderProvider.BSTKD,
+            SalesOrderProvider.WORKSITEEND,
+            SalesOrderProvider.KDKG2,
+            SalesOrderProvider.DATERAZ,
+            SalesOrderProvider.ZTERM,
+            SalesOrderProvider.REDUCEDTAX,
+            SalesOrderProvider.BSARK,
+            SalesOrderProvider.FITTER,
+            SalesOrderProvider.BOOK,
+            SalesOrderProvider.BLOCK,
+            SalesOrderProvider.MEASURER,
+            SalesOrderProvider.SURVEYTIME,
+            SalesOrderProvider.WORKSITEINDIC,
+            SalesOrderProvider.VBELV,
+            SalesOrderProvider.AUART,
+            SalesOrderProvider.KUNNR,
+            SalesOrderProvider.KDGRP,
+            SalesOrderProvider.VKORG,
+            SalesOrderProvider.BUKRS,
+            SalesOrderProvider.VTWEG,
+            SalesOrderProvider.SPART,
+            SalesOrderProvider.VKBUR,
+            SalesOrderProvider.ERDAT,
+            SalesOrderProvider.AEDAT,
+            SalesOrderProvider.DELIVERYDATE,
+            SalesOrderProvider.NETWR,
+            SalesOrderProvider.GROSSAMOUNT,
+            SalesOrderProvider.WAERK,
+            SalesOrderProvider.TOTALDISCOUNT,
+            SalesOrderProvider.CREDITDELETED
 	};
 
     private String[] columnNames;
@@ -66,6 +160,7 @@ public class SalesOrderProvider extends ContentProvider implements IWebserviceRe
 
 	
 	//Pointer vers le cursor en cours (unique ??)
+    //Considérons le comme unique pour le moment, il le faut pour récupérer la réponse du webservice (événementiel)
     SimpleWebserviceCursor currentCursor;
 
 
@@ -123,7 +218,7 @@ public class SalesOrderProvider extends ContentProvider implements IWebserviceRe
         contentUri = uri;
         currentCursor = new SimpleWebserviceCursor(uri,columns);
         currentCursor.setNotificationUri(getContext().getContentResolver(), uri);
-		callWebservice(selection, currentCursor);
+        callWebservice(selection, currentCursor);
 
 		return currentCursor;
 

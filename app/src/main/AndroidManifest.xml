@@ -11,7 +11,8 @@
         <activity
             android:name=".MainActivity"
             android:icon="@drawable/ic_logo"
-			android:theme="@style/AppTheme"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!--<intent-filter><action android:name="android.intent.action.VIEW"></action>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"></action>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="content"
-                    android:host="com.kimveasna.customerprovider"
-                    android:mimeType="vnd.android.cursor.item/vnd.kimveasna.customer"/>
-            </intent-filter>-->
+                    android:host="com.lapeyre.sales"
+                    android:mimeType="vnd.android.cursor.item/vnd.lapeyre.sales.salesorder"/>
+            </intent-filter>
         </activity>
 
         <!--<activity android:name=".CustomerSearch"
@@ -40,6 +42,8 @@
             android:value=".CustomerSearch" />
         <provider android:authorities="com.kimveasna.customerprovider" android:name="com.kimveasna.CustomerProvider"></provider>
         -->
+        <provider android:authorities="com.lapeyre.sales" android:name="com.xyzit.sitcom.com.xyzit.sitcom.provider.SalesOrderProvider"></provider>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
