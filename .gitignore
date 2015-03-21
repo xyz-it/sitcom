@@ -3,3 +3,5 @@ gen/
 obj/
 libs/*/*.so
 build/
+app/build/
+!app/build/**/*$$PM.class
