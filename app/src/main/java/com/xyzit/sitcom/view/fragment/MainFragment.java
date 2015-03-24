@@ -18,6 +18,8 @@ public class MainFragment extends AbstractFragment {
 
     private DummySampleModel model;
 
+    private View innerView;
+
     //private static String[] mFrames;
 
     public MainFragment() {
@@ -30,7 +32,8 @@ public class MainFragment extends AbstractFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        model = new DummySampleModel();
+        if(model == null)
+            model = new DummySampleModel();
 
     }
 
@@ -38,14 +41,17 @@ public class MainFragment extends AbstractFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        if(innerView!=null)
+            return innerView;
+
         int frameId = getArguments().getInt(ARG_FRAGMENT_ID);
 
 
         //View rootView = inflater.inflate(frameId, container, false);
 
         ViewBinder viewBinder = createViewBinder();
-        View rootView = viewBinder.inflateAndBindWithoutAttachingToRoot(frameId, model, container);
+        innerView = viewBinder.inflateAndBindWithoutAttachingToRoot(frameId, model, container);
 
-        return rootView;
+        return innerView;
     }
 }

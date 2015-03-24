@@ -12,6 +12,7 @@ import com.xyzit.sitcom.R;
 public class LeftMenuAdapter extends ArrayAdapter<String> {
 	private final Context context;
 	private int[] itemView = new int[7];
+	private View[] views = new View[7];
 
 	
 	public LeftMenuAdapter(Context context, int layout, String[] values) {
@@ -52,6 +53,10 @@ public class LeftMenuAdapter extends ArrayAdapter<String> {
 		
 		return rowView;*/
 
+		if (views[position] != null)
+			return views[position];
+
+
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(itemView[position], parent, false);
@@ -70,6 +75,7 @@ public class LeftMenuAdapter extends ArrayAdapter<String> {
         }
 
 		//rowView.setClickable(false);
+		views[position] = rowView;
         return rowView;
 	}
 	}

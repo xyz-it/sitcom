@@ -29,7 +29,6 @@ import com.xyzit.sitcom.controller.adapter.LeftMenuAdapter;
 import com.xyzit.sitcom.view.fragment.MainFragment;
 import com.xyzit.sitcom.view.fragment.SettingsFragment;
 
-import org.robobinding.ViewBinder;
 import org.robobinding.binder.BinderFactory;
 import org.robobinding.binder.BinderFactoryBuilder;
 
@@ -79,6 +78,8 @@ public class MainActivity extends ActionBarActivity {
     private TypedArray mLeftMenuItems;
     private TypedArray mIcons;
     private View mainFrame;
+
+    private Fragment[] mFragments = new Fragment[7];
 
     private BinderFactory reusableBinderFactory;
 
@@ -307,15 +308,25 @@ public class MainActivity extends ActionBarActivity {
                 "layout", getPackageName());
 
 
-        Fragment fragment = new MainFragment();
-        Bundle args = new Bundle();
-        args.putInt(MainFragment.ARG_FRAGMENT_ID, frameId);
-        fragment.setArguments(args);
+        Fragment fragment;
 
+        //MainFragment encapsulates the binding, and can be used in place of Fragment (inherited)
+        if (mFragments[position] == null) {
+            fragment = new MainFragment();
+
+
+            Bundle args = new Bundle();
+            args.putInt(MainFragment.ARG_FRAGMENT_ID, frameId);
+            fragment.setArguments(args);
+            mFragments[position] = fragment;
+        }
+        else {
+            fragment = mFragments[position];
+        }
+
+        //Launch the frame
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.mainFrame, fragment).commit();
-
-
 
     }
 
@@ -358,7 +369,7 @@ public class MainActivity extends ActionBarActivity {
         return reusableBinderFactory;
     }
 
-
+/*
     private ViewBinder createViewBinder() {
         BinderFactory binderFactory = getReusableBinderFactory();
         return binderFactory.createViewBinder(this);
@@ -369,7 +380,8 @@ public class MainActivity extends ActionBarActivity {
         ViewBinder viewBinder = createViewBinder();
         View rootView = viewBinder.inflateAndBind(layoutId, presentationModel);
         setContentView(rootView);
-    }
+    }*/
+
 
     /**
      * Fragment that appears in the "content_frame", shows a planet
@@ -400,8 +412,8 @@ public class MainActivity extends ActionBarActivity {
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Toast.makeText(view.getContext(), "click", Toast.LENGTH_LONG);
-			selectItem(position);
+            Toast.makeText(view.getContext(), "click", Toast.LENGTH_LONG).show();
+            selectItem(position);
         }
     }
 }
